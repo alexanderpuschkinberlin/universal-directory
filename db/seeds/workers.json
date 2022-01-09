@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Montie",
+    "surname": "Burns",
+    "email": "boss@montie.com",
+    "birth_date": "20.12.1955",
+    "password": "montie01"
+  },
+  {
+    "name": "Abraham",
+    "surname": "Simpson",
+    "email": "Abraham@simpsons.com",
+    "birth_date": "20.07.1935",
+    "password": "abby01"
+  },
+  {
+    "name": "Barnie",
+    "surname": "Gamble",
+    "email": "Barnie@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "barnie01"
+  },
+  {
+    "name": "Edna",
+    "surname": "Krabbapel",
+    "email": "Edna@elemschool.com",
+    "birth_date": "25.05.1988",
+    "password": "enda01"
+  }
+]

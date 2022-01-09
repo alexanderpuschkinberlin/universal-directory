@@ -32,8 +32,8 @@ User.init(
         isEmail: true,
       },
     },
-    birt_date: {
-      type: DataTypes.DATE,
+    birth_date: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     password: {
@@ -46,9 +46,16 @@ User.init(
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
+      beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
       },
     },
     sequelize,
@@ -57,21 +64,6 @@ User.init(
     underscored: true,
     modelName: "user",
   }
-  // {
-  //   hooks: {
-  //     beforeCreate: async (newUserData) => {
-  //       newUserData.password = await bcrypt.hash(newUserData.password, 10);
-  //       return newUserData;
-  //     },
-  //     beforeUpdate: async (updatedUserData) => {
-  //       updatedUserData.password = await bcrypt.hash(
-  //         updatedUserData.password,
-  //         10
-  //       );
-  //       return updatedUserData;
-  //     },
-  //   },
-  // },
 );
 
 module.exports = User;

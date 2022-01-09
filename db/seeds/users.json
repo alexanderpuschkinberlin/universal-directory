@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Homer",
+    "surname": "Simpson",
+    "email": "homer@simpsons.com",
+    "birth_date": "20.12.1965",
+    "password": "homer01"
+  },
+  {
+    "name": "Lisa",
+    "surname": "Simpson",
+    "email": "Lisa@simpsons.com",
+    "birth_date": "20.07.1980",
+    "password": "lisa01"
+  },
+  {
+    "name": "Bart",
+    "surname": "Simpson",
+    "email": "Bart@simpsons.com",
+    "birth_date": "18.03.1978",
+    "password": "bart01"
+  },
+  {
+    "name": "Maggie",
+    "surname": "Simpson",
+    "email": "Maggie@simpsons.com",
+    "birth_date": "25.05.1985",
+    "password": "maggie01"
+  }
+]

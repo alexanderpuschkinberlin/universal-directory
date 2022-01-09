@@ -4,32 +4,63 @@ const Order = require("./order");
 const Tag = require("./tag");
 const Expertise = require("./expertise");
 const Contact = require("./contact");
+const Review = require("./review");
 
-// User.hasMany(Post, {
-//   foreignKey: "user_id",
-// });
+Worker.hasMany(Expertise, {
+  foreignKey: "worker_id",
+});
 
-// Post.belongsTo(User, {
-//   foreignKey: "user_id",
-// });
+Expertise.belongsTo(Worker, {
+  foreignKey: "worker_id",
+});
 
-// Comment.belongsTo(Post, {
-//   foreignKey: "post_id",
-// });
+Tag.hasMany(Expertise, {
+  foreignKey: "tag_id",
+});
 
-// Post.hasMany(Comment, {
-//   foreignKey: "post_id",
-//   // When we delete a Post, we make sure to also delete the associated comments.
-//   onDelete: "CASCADE",
-// });
+Expertise.belongsTo(Tag, {
+  foreignKey: "tag_id",
+});
 
-// User.hasMany(Comment, {
-//   foreignKey: "user_id",
-// });
+Worker.hasOne(Contact, {
+  foreignKey: "worker_id",
+});
 
-// Comment.belongsTo(User, {
-//   foreignKey: "user_id",
-// });
+Contact.belongsTo(Worker, {
+  foreignKey: "worker_id",
+});
+
+User.hasMany(Order, {
+  foreignKey: "user_id",
+});
+
+Order.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Worker.hasMany(Order, {
+  foreignKey: "worker_id",
+});
+
+Order.belongsTo(Worker, {
+  foreignKey: "worker_id",
+});
+
+User.hasMany(Review, {
+  foreignKey: "user_id",
+});
+
+Review.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Worker.hasMany(Review, {
+  foreignKey: "worker_id",
+});
+
+Review.belongsTo(Worker, {
+  foreignKey: "worker_id",
+});
 
 // We package our models and export them as an object so we can import them together and use their proper names
-module.exports = { User, Worker, Order, Tag, Expertise, Contact };
+module.exports = { User, Worker, Order, Tag, Expertise, Contact, Review };

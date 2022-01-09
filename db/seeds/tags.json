@@ -1,0 +1,18 @@
+[
+  {
+    "name": "engineer",
+    "description": " uses math and science to solve different technical problems."
+  },
+  {
+    "name": "plumber",
+    "description": "maintain the flow and drainage of water, air, and other gases by assembling, installing, and repairing pipes, fittings, and plumbing fixtures districtwide"
+  },
+  {
+    "name": "architect",
+    "description": "create designs for new construction projects, alterations and redevelopments."
+  },
+  {
+    "name": "interior designer",
+    "description": "make indoor spaces functional, safe, and beautiful by determining space requirements and selecting essential and decorative items, such as colors, lighting, and materials."
+  }
+]

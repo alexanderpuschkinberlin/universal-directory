@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
 class Worker extends Model {
   checkPassword(loginPw) {
@@ -31,8 +32,8 @@ Worker.init(
         isEmail: true,
       },
     },
-    birt_date: {
-      type: DataTypes.DATE,
+    birth_date: {
+      type: DataTypes.STRING, //How can i make seed in particular format???
       allowNull: false,
     },
     password: {
@@ -45,9 +46,16 @@ Worker.init(
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
+      beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
       },
     },
     sequelize,
