@@ -1,0 +1,35 @@
+<section>
+  <div class="hero"></div>
+</section>
+<!-- Loop over each object in the posts array -->
+
+<div class="row mt-5">
+  <div class="col-md-6 offset-3 mt-5">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <h2><strong>Bootstrap 4 Tag Input Example</strong></h2>
+      </div>
+      <div class="card-body">
+        {{#each tags as |tag|}}
+          <label>{{name}} </label>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Seach Bar"
+    aria-label="Search Bar"
+    aria-describedby="button-addon2"
+  />
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+      Search
+    </button>
+  </div>
+</div>

@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #d9dcd6;
+}
+
+/* This is styling of Header of the marketing website */
+header {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #2a607c;
+  color: #ffffff;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+header h1 .seo {
+  color: #d9dcd6;
+}
+
+/* This is styling of Nav of the marketing website */
+
+nav {
+  padding-top: 20px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  background-color: #2a607c;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+  list-style-type: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* This is styling of the "hero" picture of the website*/
+.hero {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("./digital-marketing-meeting.jpg");
+  background-size: cover;
+  display: inline-block;
+  background-position: center;
+}
+
+/* This is styling of Digital Marketing Services Section of the website*/
+
+main {
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.digital-marketing {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+  color: #ffffff;
+}
+
+img {
+  max-height: 200px;
+  display: block;
+}
+
+h2,
+h3,
+h3,
+h4 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 25px;
+}
+
+/* This is styling of the aside part of the website*/
+aside {
+  margin-right: 25px;
+  padding: 20px;
+  clear: both;
+  float: right;
+  width: 20%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #2589bd;
+}
+
+h5 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.benefit {
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.aside img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100px;
+}
+
+/* This is styling of the Footer of the website*/
+
+.footer {
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+.bootstrap-tagsinput {
+  width: 100%;
+}
+.label-info {
+  background-color: #17a2b8;
+}
+.label {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
