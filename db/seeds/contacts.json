@@ -1,0 +1,18 @@
+[
+  {
+    "worker_id": 1,
+    "address": "Knaakstasse 3",
+    "contact_number": "1768548646",
+    "time_availability": "10:00-16:00",
+    "country": "Germany",
+    "city": "Berlin"
+  },
+  {
+    "worker_id": 2,
+    "address": "Danzigerstrasse 15",
+    "contact_number": "1764558646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin"
+  }
+]
