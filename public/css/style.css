@@ -55,17 +55,6 @@ p {
   font-size: 16px;
 }
 
-/* This is styling of the "hero" picture of the website*/
-.hero {
-  height: 800px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-image: url("./digital-marketing-meeting.jpg");
-  background-size: cover;
-  display: inline-block;
-  background-position: center;
-}
-
 /* This is styling of Digital Marketing Services Section of the website*/
 
 main {
