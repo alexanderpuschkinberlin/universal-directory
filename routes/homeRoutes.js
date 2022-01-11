@@ -2,23 +2,24 @@ const router = require("express").Router();
 const { Worker, User, Tag } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, async (req, res) => {
+// // ? check why she get first tags
+router.get("/", async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
-    });
+    const tagsData = await Tag.findAll();
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    // Serialize data so the template can read it
+    const tags = tagsData.map((tag) => tag.get({ plain: true }));
+    // Pass serialized data and session flag into template
 
     res.render("homepage", {
-      users,
+      tags,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -28,17 +29,17 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// // ? check why she get first tags
-// router.get("/", async (req, res) => {
+// router.get("/", withAuth, async (req, res) => {
 //   try {
-//     const tagsData = await Tag.findAll();
+//     const userData = await User.findAll({
+//       attributes: { exclude: ["password"] },
+//       order: [["name", "ASC"]],
+//     });
 
-//     // Serialize data so the template can read it
-//     const tags = tagsData.map((tag) => tag.get({ plain: true }));
-//     // Pass serialized data and session flag into template
+//     const users = userData.map((project) => project.get({ plain: true }));
 
 //     res.render("homepage", {
-//       tags,
+//       users,
 //       logged_in: req.session.logged_in,
 //     });
 //   } catch (err) {
