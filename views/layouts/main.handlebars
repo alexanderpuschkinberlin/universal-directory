@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <!---on Bar of the marketing website-->
+    <!---r of the marketing website-->
 
     <header>
       <h1>Universal Directory</h1>
@@ -43,6 +43,13 @@
         <li>
           <a href="#someLink">Some Link</a>
         </li>
+        <li>
+          {{#if logged_in}}
+            <nav>
+              <button class="btn" id="logout">logout</button>
+            </nav>
+          {{/if}}
+        </li>
       </ul>
     </nav>
 
@@ -51,6 +58,9 @@
       {{{body}}}
 
     </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 
   </body>
 </html>
