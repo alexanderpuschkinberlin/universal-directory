@@ -3,7 +3,7 @@ const { Worker, User, Tag } = require("../models");
 const withAuth = require("../utils/auth");
 
 // // ? check why she get first tags
-router.get("/", async (req, res) => {
+router.get("/homepage", async (req, res) => {
   console.log("Rendering the homepage", req.session.logged_in);
   try {
     const tagsData = await Tag.findAll();
@@ -33,22 +33,5 @@ router.get("/login", (req, res) => {
 router.get("/aboutus", (req, res) => {
   res.render("aboutus");
 });
-// router.get("/", withAuth, async (req, res) => {
-//   try {
-//     const userData = await User.findAll({
-//       attributes: { exclude: ["password"] },
-//       order: [["name", "ASC"]],
-//     });
-
-//     const users = userData.map((project) => project.get({ plain: true }));
-
-//     res.render("homepage", {
-//       users,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;
