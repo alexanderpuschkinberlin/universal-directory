@@ -4,6 +4,7 @@ const withAuth = require("../utils/auth");
 
 // // ? check why she get first tags
 router.get("/", async (req, res) => {
+  console.log("Rendering the homepage", req.session.logged_in);
   try {
     const tagsData = await Tag.findAll();
 
@@ -29,6 +30,9 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/aboutus", (req, res) => {
+  res.render("aboutus");
+});
 // router.get("/", withAuth, async (req, res) => {
 //   try {
 //     const userData = await User.findAll({
