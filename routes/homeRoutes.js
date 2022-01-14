@@ -19,4 +19,11 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/profile/:id", async (req, res) => {
+  const userData = await User.findOne({ where: { id: req.params.id } });
+  const user = userData.get({ plain: true });
+
+  res.render("profile", { user });
+});
+
 module.exports = router;
