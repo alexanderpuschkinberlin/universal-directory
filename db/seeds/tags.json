@@ -1,18 +1,32 @@
 [
   {
-    "name": "engineer",
-    "description": " uses math and science to solve different technical problems."
+    "name": "Alarm Systems",
+    "description": " Cross County Locksmith has over 20 years of experience and over 50 years of expertise in home security",
+    "image_url": "https://24-7-locksmiths.co.uk/wp-content/uploads/2020/12/alarm-locksmith-1.jpg"
   },
   {
-    "name": "plumber",
-    "description": "maintain the flow and drainage of water, air, and other gases by assembling, installing, and repairing pipes, fittings, and plumbing fixtures districtwide"
+    "name": "Locking facilities",
+    "description": "Securing a property properly is one of the most important services that a Locksmith provides and is the most important aspect to any customer.",
+    "image_url": "https://www.connectedservices.com/images/locksmith.jpg"
   },
   {
-    "name": "architect",
-    "description": "create designs for new construction projects, alterations and redevelopments."
+    "name": "Windows",
+    "description": "Our window locksmith can install locks on your home to keep you feeling safe. ",
+    "image_url": "https://www.sarnawindows.eu/wp-content/uploads/aluminum_zajawki_box_960.jpg"
   },
   {
-    "name": "interior designer",
-    "description": "make indoor spaces functional, safe, and beautiful by determining space requirements and selecting essential and decorative items, such as colors, lighting, and materials."
+    "name": "Doors",
+    "description": "What usually follows is anxiety over the realisation that you’ve been locked out, followed by frantically searching for ways to get inside.",
+    "image_url": "https://www.rd.com/wp-content/uploads/2018/09/easy-lock_locksmith-secrets.jpg"
+  },
+  {
+    "name": "Fire protection",
+    "description": "The Alarm, Locksmith, and Fire Sprinkler Industry includes: monitoring, burglar alarm, fire alarm, fire sprinkler, locksmithing, access control",
+    "image_url": "https://mylocallocksmithtx.com/wp-content/uploads/2019/07/1200x80028-1024x683.jpg"
+  },
+  {
+    "name": "Video Surveliance",
+    "description": "Video surveillance systems involve strategic placement of security cameras, monitoring motion and activity, generating alerts, transmitting footage, and storing that footage.",
+    "image_url": "https://nexgenme.com/blog/wp-content/uploads/2021/06/CCTV-technology.jpeg"
   }
 ]
