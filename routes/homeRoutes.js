@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Worker, User, Tag } = require("../models");
+const { Worker, User, Tag, Contact, Expertise } = require("../models");
 // const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -20,10 +20,23 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/profile/:id", async (req, res) => {
-  const userData = await User.findOne({ where: { id: req.params.id } });
-  const user = userData.get({ plain: true });
+  try {
+    const workerData = await Worker.findOne({
+      where: { id: req.params.id },
+      include: [
+        {
+          model: Contact,
+          attributes: ["address", "city", "country", "contact_number"],
+        },
+      ],
+    });
+    const worker = workerData.get({ plain: true });
+    console.log("Hello worker", worker);
 
-  res.render("profile", { user });
+    res.render("profile", { worker });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
