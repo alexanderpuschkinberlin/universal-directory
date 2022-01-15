@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { request } = require("express");
 // const { Model } = require("sequelize/types");
-const { Worker, User, Tag } = require("../models");
+const { Worker, User, Tag, Contact } = require("../models");
 const withAuth = require("../utils/auth");
 
 // // ? check why she get first tags
@@ -25,7 +25,6 @@ router.get("/", async (req, res) => {
 // Rendering workers per tag search
 
 router.get("/tagsearch/:id", async (req, res) => {
-  console.log("Check data!!!!");
   try {
     const tagData = await Tag.findByPk(req.params.id, {
       include: [
@@ -38,11 +37,28 @@ router.get("/tagsearch/:id", async (req, res) => {
     // Serialize data so the template can read it
     const tags = tagData.get({ plain: true });
     // Pass serialized data and session flag into template
-    console.log("Check data!!!!", tags);
     res.render("tagsearch", {
       tags,
       //   logged_in: req.session.logged_in,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/profile/:id", async (req, res) => {
+  try {
+    const workerData = await Worker.findOne({
+      where: { id: req.params.id },
+      include: [
+        {
+          model: Contact,
+          attributes: ["address", "city", "country", "contact_number"],
+        },
+      ],
+    });
+    const worker = workerData.get({ plain: true });
+    res.render("profile", { worker });
   } catch (err) {
     res.status(500).json(err);
   }
