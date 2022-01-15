@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { request } = require("express");
 const { Worker, User, Tag } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -26,7 +27,6 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-
   res.render("login");
 });
 
@@ -38,8 +38,19 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.post("/signup", (req, res) => {
-  console.log(req.body);
+router.post("/signup", async (req, res) => {
+  const userData = {
+    ...req.body,
+    birth_date: req.body.birthDate,
+  };
+  console.log(userData);
+  try {
+    const users = await User.create(userData);
+    res.render("login");
+  } catch (error) {
+    console.log(error);
+    res.render("login");
+  }
 });
 
 router.get("/contact", (req, res) => {
