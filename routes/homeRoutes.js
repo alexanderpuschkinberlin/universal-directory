@@ -38,6 +38,10 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.post("/signup", (req, res) => {
+  console.log(req.body);
+});
+
 router.get("/contact", (req, res) => {
   res.render("contact");
 });
