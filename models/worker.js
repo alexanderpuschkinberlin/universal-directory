@@ -28,6 +28,21 @@ Worker.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    years_experience: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "tag",
+        key: "id",
+      },
+    },
+    certificate: {
+      type: DataTypes.BOOLEAN, // why Boolean is colored differently?
+      allowNull: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
