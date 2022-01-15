@@ -16,5 +16,35 @@
     "worker_id": 3,
     "certificate": "true",
     "tag_id": 3
+  },
+  {
+    "years_experience": 12,
+    "worker_id": 4,
+    "certificate": "true",
+    "tag_id": 1
+  },
+  {
+    "years_experience": 7,
+    "worker_id": 5,
+    "certificate": "true",
+    "tag_id": 2
+  },
+  {
+    "years_experience": 3,
+    "worker_id": 7,
+    "certificate": "true",
+    "tag_id": 3
+  },
+  {
+    "years_experience": 12,
+    "worker_id": 8,
+    "certificate": "true",
+    "tag_id": 1
+  },
+  {
+    "years_experience": 7,
+    "worker_id": 9,
+    "certificate": "true",
+    "tag_id": 2
   }
 ]
