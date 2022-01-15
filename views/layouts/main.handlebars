@@ -76,16 +76,30 @@
                     class="font-medium text-gray-500 hover:text-gray-900"
                     >Contact Us</a
                   >
-                  <a
-                    href="/login"
-                    class="font-medium text-gray-500 hover:text-gray-900"
-                    >Log In</a
-                  >
+
+                  {{#if logged_in}}
+                    <a
+                      href="/logout"
+                      class="font-medium text-gray-500 hover:text-gray-900"
+                      id="logout"
+                      >Log out</a
+                    >
+                   {{else}}
+                    <a
+                      href="/login"
+                      class="font-medium text-gray-500 hover:text-gray-900"
+                      >Log In</a
+                    >
+                  {{/if}}
                 </div>
               </nav>
             </div>
     <main class="main-container">
       {{{body}}}
     </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+
   </body>
 </html>

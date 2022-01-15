@@ -5,6 +5,9 @@
     "email": "boss@montie.com",
     "birth_date": "20.12.1955",
     "password": "montie01",
+    "years_experience": 3,
+    "certificate": "true",
+    "tag_id": 1,
     "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
   },
   {
@@ -13,6 +16,9 @@
     "email": "Abraham@simpsons.com",
     "birth_date": "20.07.1935",
     "password": "abby01",
+    "years_experience": 4,
+    "certificate": "true",
+    "tag_id": 1,
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
   {
@@ -21,6 +27,9 @@
     "email": "Barnie@aalchoholic.com",
     "birth_date": "20.05.1977",
     "password": "barnie01",
+    "years_experience": 5,
+    "certificate": "true",
+    "tag_id": 2,
     "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
   },
   {
@@ -29,6 +38,64 @@
     "email": "Edna@elemschool.com",
     "birth_date": "25.05.1988",
     "password": "enda01",
+    "years_experience": 3,
+    "certificate": "true",
+    "tag_id": 1,
     "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
+  },
+  {
+    "name": "Montie",
+    "surname": "Burns",
+    "email": "test1@montie.com",
+    "birth_date": "20.12.1955",
+    "password": "montie01",
+    "years_experience": 4,
+    "certificate": "true",
+    "tag_id": 2,
+    "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
+  },
+  {
+    "name": "Abraham",
+    "surname": "Simpson",
+    "email": "test2@simpsons.com",
+    "birth_date": "20.07.1935",
+    "password": "abby01",
+    "years_experience": 5,
+    "certificate": "true",
+    "tag_id": 2,
+    "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
+  },
+  {
+    "name": "Barnie",
+    "surname": "Gamble",
+    "email": "test3@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "barnie01",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 2,
+    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
+  },
+  {
+    "name": "Edna",
+    "surname": "Krabbapel",
+    "email": "test4@elemschool.com",
+    "birth_date": "25.05.1988",
+    "password": "enda01",
+    "years_experience": 4,
+    "certificate": "true",
+    "tag_id": 3,
+    "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
+  },
+  {
+    "name": "Barnie",
+    "surname": "Gamble",
+    "email": "test5@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "barnie01",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 3,
+    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
   }
 ]

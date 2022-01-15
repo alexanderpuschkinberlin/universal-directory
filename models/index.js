@@ -2,23 +2,14 @@ const User = require("./user");
 const Worker = require("./worker");
 const Order = require("./order");
 const Tag = require("./tag");
-const Expertise = require("./expertise");
 const Contact = require("./contact");
 const Review = require("./review");
 
-Worker.hasMany(Expertise, {
-  foreignKey: "worker_id",
-});
-
-Expertise.belongsTo(Worker, {
-  foreignKey: "worker_id",
-});
-
-Tag.hasMany(Expertise, {
+Worker.belongsTo(Tag, {
   foreignKey: "tag_id",
 });
 
-Expertise.belongsTo(Tag, {
+Tag.hasMany(Worker, {
   foreignKey: "tag_id",
 });
 
@@ -63,4 +54,4 @@ Review.belongsTo(Worker, {
 });
 
 // We package our models and export them as an object so we can import them together and use their proper names
-module.exports = { User, Worker, Order, Tag, Expertise, Contact, Review };
+module.exports = { User, Worker, Order, Tag, Contact, Review };
