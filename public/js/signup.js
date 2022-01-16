@@ -1,27 +1,49 @@
-const signupPostHandler = async (event) => {
+// This is for signing up new users
+const signupFormHandler = async (event) => {
   event.preventDefault();
+
+  const username = document.querySelector("#username-signup").value.trim();
   const name = document.querySelector("#name").value.trim();
-  const surname = document.querySelector("#surename").value.trim();
-  const email = document.querySelector("#email").value.trim();
-  const birthDate = document.querySelector("#birth-date").value.trim();
-  const password = document.querySelector("#password").value.trim();
-  //   console.log(name, surname, email, birthDate, password);
-  if (name && surname && email && birthDate && password) {
-    const response = await fetch("/signup", {
+  const surname = document.querySelector("#surname").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const birth_date = document.querySelector("#birth-date").value.trim();
+  const years_experience = document.querySelector("#experience").value.trim();
+  const about = document.querySelector("#about").value.trim();
+  const certificate = document.querySelector("#certificate").value.trim();
+  const tag_id = document.querySelector("#tag-id").value.trim(); // How to loop over tag name to get a tag id
+  const password = document.querySelector("#password-signup").value.trim();
+
+  if (
+    username &&
+    email &&
+    password &&
+    name &&
+    surname &&
+    birth_date &&
+    tag_id
+  ) {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
-      body: JSON.stringify({ name, surname, email, birthDate, password }),
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+        name,
+        surname,
+        birth_date,
+        tag_id,
+      }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      window.location.href = "/homepage";
     } else {
-      alert("Failed to sign-up");
+      alert(response.statusText);
     }
-  } else {
-    alert("Please fill all the fields");
   }
 };
+
 document
-  .querySelector("#signupbtn")
-  .addEventListener("click", signupPostHandler);
+  .querySelector("#signup-form")
+  .addEventListener("submit", signupFormHandler);

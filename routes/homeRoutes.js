@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { request } = require("express");
 // const { Model } = require("sequelize/types");
-const { Worker, User, Tag, Contact } = require("../models");
+const { Worker, User, Tag, Contact, Order } = require("../models");
 const withAuth = require("../utils/auth");
 
 // // ? check why she get first tags
@@ -107,9 +107,23 @@ router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-// Rendering Order Page
-router.get("/order", (req, res) => {
-  res.render("order");
+// Rendering Order Routes
+router.get("/placedOrder", async (req, res) => {
+  console.log("Rendering orders page", req.session.logged_in);
+  try {
+    const orderData = await Order.findAll();
+
+    // Serialize data so the template can read it
+    const orders = orderData.map((order) => order.get({ plain: true }));
+    // Pass serialized data and session flag into template
+
+    res.render("placedOrder", {
+      orders,
+      // logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
