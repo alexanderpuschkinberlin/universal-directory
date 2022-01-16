@@ -8,6 +8,7 @@
     "years_experience": 3,
     "certificate": "true",
     "tag_id": 1,
+    "about": "Hard working guy who get thing done fast and efficient",
     "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
   },
   {
@@ -19,6 +20,7 @@
     "years_experience": 4,
     "certificate": "true",
     "tag_id": 1,
+    "about": "I will commit to deliver you superior service",
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
   {
@@ -30,6 +32,7 @@
     "years_experience": 5,
     "certificate": "true",
     "tag_id": 2,
+    "about": "I am in general an awesome person! :)",
     "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
   },
   {
@@ -41,6 +44,7 @@
     "years_experience": 3,
     "certificate": "true",
     "tag_id": 1,
+    "about": "All you need is here!",
     "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
   },
   {
@@ -52,6 +56,7 @@
     "years_experience": 4,
     "certificate": "true",
     "tag_id": 2,
+    "about": "I will please my customers with great work",
     "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
   },
   {
@@ -63,6 +68,7 @@
     "years_experience": 5,
     "certificate": "true",
     "tag_id": 2,
+    "about": "I want to quit, but need money so please order my services :) ",
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
   {
@@ -74,6 +80,7 @@
     "years_experience": 7,
     "certificate": "true",
     "tag_id": 2,
+    "about": "I need money for beer!",
     "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
   },
   {
@@ -85,6 +92,7 @@
     "years_experience": 4,
     "certificate": "true",
     "tag_id": 3,
+    "about": "I too serious for this bullshit ))))",
     "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
   },
   {
@@ -96,6 +104,7 @@
     "years_experience": 7,
     "certificate": "true",
     "tag_id": 3,
+    "about": "It is obvious that our project need to get A+!!!",
     "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
   }
 ]

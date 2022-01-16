@@ -39,6 +39,10 @@ Worker.init(
         key: "id",
       },
     },
+    about: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     certificate: {
       type: DataTypes.BOOLEAN, // why Boolean is colored differently?
       allowNull: true,

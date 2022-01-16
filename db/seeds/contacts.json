@@ -5,7 +5,9 @@
     "contact_number": "1768548646",
     "time_availability": "10:00-16:00",
     "country": "Germany",
-    "city": "Berlin"
+    "city": "Berlin",
+    "latitude": "52.539386",
+    "longitude": "13.413711"
   },
   {
     "worker_id": 2,
@@ -13,6 +15,58 @@
     "contact_number": "1764558646",
     "time_availability": "12:00-16:00",
     "country": "Germany",
-    "city": "Berlin"
+    "city": "Berlin",
+    "latitude": "52.541016",
+    "longitude": "13.415524"
+  },
+  {
+    "worker_id": 3,
+    "address": "Kaiser Augusta Allee 14",
+    "contact_number": "17644578646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin",
+    "latitude": "52.526393",
+    "longitude": "13.320820"
+  },
+  {
+    "worker_id": 4,
+    "address": "Prenzlauer Allee 14",
+    "contact_number": "17623578646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin",
+    "latitude": "52.530507",
+    "longitude": "13.419452"
+  },
+  {
+    "worker_id": 5,
+    "address": "Strassburger str 15",
+    "contact_number": "17623588646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin",
+    "latitude": "52.530428",
+    "longitude": "13.414808"
+  },
+  {
+    "worker_id": 6,
+    "address": "Prenzlauer Allee 14",
+    "contact_number": "17623578646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin",
+    "latitude": "52.530507",
+    "longitude": "13.419452"
+  },
+  {
+    "worker_id": 7,
+    "address": "Kollwitzplatz 4",
+    "contact_number": "17623578646",
+    "time_availability": "12:00-16:00",
+    "country": "Germany",
+    "city": "Berlin",
+    "latitude": "52.536318",
+    "longitude": "13.416934"
   }
 ]
