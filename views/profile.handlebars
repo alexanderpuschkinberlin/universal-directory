@@ -89,7 +89,17 @@
         >
           <dt class="text-sm font-medium text-gray-500">Google Maps</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-            "maps placeholder"
+            <script src="/js/map.js"></script>
+            <div style="display:none" id="lat">{{worker.Contact.latitude}}</div>
+            <div style="display:none" id="lng">{{worker.Contact.longitude}}</div>
+           <!--The div element for the map -->
+            <div id="map"></div>
+
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbUuD8wwa9eOdyVKrYMM5ckMhdKAO6hoE&callback=initMap&libraries=&v=weekly"
+            async
+            ></script>
           </dd>
         </div>
 
@@ -109,7 +119,7 @@
           </dd>
         </div>
 
-        <div
+        <!--<div
           class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
         >
           <dt class="text-sm font-medium text-gray-500">Video</dt>
@@ -124,7 +134,7 @@
               allowfullscreen
             ></iframe>
           </dd>
-        </div>
+        </div> -->
 
         {{!-- <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">Attachments</dt>
