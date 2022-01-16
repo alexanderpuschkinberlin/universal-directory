@@ -15,6 +15,10 @@ Order.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    order_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     worker_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -22,6 +22,14 @@ Contact.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    longitude: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    latitude: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     contact_number: {
       type: DataTypes.STRING,
       allowNull: false,

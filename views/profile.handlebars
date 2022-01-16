@@ -1,10 +1,10 @@
 {{!-- <h1>{{user.name}}</h1> --}}
 
-  <!-- This example requires Tailwind CSS v2.0+ -->
+<!-- This example requires Tailwind CSS v2.0+ -->
 
-  {{!-- div around the content --}}
+{{! div around the content }}
 
-  <div class="profile">
+<div class="profile">
 
   <div class="bg-white shadow overflow-hidden sm:rounded-lg">
     <div class="px-4 py-5 sm:px-6">
@@ -18,7 +18,8 @@
         >
           <dt class="text-sm font-medium text-gray-500">Name</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-            {{worker.name}} {{worker.surname}}
+            {{worker.name}}
+            {{worker.surname}}
           </dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -36,18 +37,18 @@
         >
           <dt class="text-sm font-medium text-gray-500">Contact Details</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-           
+
             <div>{{worker.Contact.contact_number}}</div>
             <div>{{worker.email}}</div>
             <div>{{worker.Contact.address}}</div>
-            
+
           </dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">Provided Services</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
             ✔ Door fitting, ✔ Window Fitting, ✔ Alarm Systems
-        
+
           </dd>
         </div>
 
@@ -107,7 +108,7 @@
                       fill-rule="evenodd"
                       d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
                       clip-rule="evenodd"
-                    />
+                    ></path>
                   </svg>
                   <span class="ml-2 flex-1 w-0 truncate"> Flyer.pdf </span>
                 </div>
@@ -125,5 +126,8 @@
         </div>
       </dl>
     </div>
+    <button
+      class="w-full h-12 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800"
+    >Order Services</button>
   </div>
-  </div>
+</div>

@@ -46,6 +46,7 @@ router.get("/tagsearch/:id", async (req, res) => {
   }
 });
 
+// Rendering profile of the worker
 router.get("/profile/:id", async (req, res) => {
   try {
     const workerData = await Worker.findOne({
@@ -63,25 +64,6 @@ router.get("/profile/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// Working copy for rendering all workers
-
-// router.get("/tagsearch", async (req, res) => {
-//   try {
-//     const workerData = await Worker.findAll({});
-
-//     // Serialize data so the template can read it
-//     const workers = workerData.map((worker) => worker.get({ plain: true }));
-//     // Pass serialized data and session flag into template
-
-//     res.render("tagsearch", {
-//       workers,
-//       //   logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
