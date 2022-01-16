@@ -41,4 +41,15 @@ router.post("/logout", (req, res) => {
   }
 });
 
+router.put("/profile/:id", async (req, res) => {
+  const worker = req.body;
+  console.log(worker);
+  try {
+    //Update worker profile and contact
+    res.status(200).json({ worker });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
