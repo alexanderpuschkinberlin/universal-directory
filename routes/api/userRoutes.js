@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Worker, Contact } = require("../../models");
 
 router.post("/login", async (req, res) => {
   try {
@@ -42,10 +42,28 @@ router.post("/logout", (req, res) => {
 });
 
 router.put("/profile/:id", async (req, res) => {
-  const worker = req.body;
+  const worker = {
+    ...req.body,
+    Contact: {
+      address: req.body.address,
+      country: req.body.country,
+      city: req.body.city,
+    },
+  };
   console.log(worker);
   try {
     //Update worker profile and contact
+    await Worker.update(worker, {
+      where: {
+        id: worker.id,
+      },
+    });
+    // Update contact separately
+    await Contact.update(worker.Contact, {
+      where: {
+        worker_id: worker.id,
+      },
+    });
     res.status(200).json({ worker });
   } catch (err) {
     res.status(500).json(err);
