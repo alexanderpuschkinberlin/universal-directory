@@ -1,11 +1,12 @@
 const sequalize = require("../../config/connection");
-const { User, Worker, Tag, Contact } = require("../../models");
+const { User, Worker, Tag, Contact, Order } = require("../../models");
 // ToDo preprare seeds for Reviews and Orders
 
 const contactsData = require("./contacts.json");
 const tagsData = require("./tags.json");
 const usersData = require("./users.json");
 const workersData = require("./workers.json");
+const orderData = require("./orders.json");
 
 const seedDatabase = async () => {
   await sequalize.sync({ force: true });
@@ -30,6 +31,10 @@ const seedDatabase = async () => {
   const contacts = await Contact.bulkCreate(contactsData);
 
   console.log("//---------Contacs seeded-----------//");
+
+  const orders = await Order.bulkCreate(orderData);
+
+  console.log("//---------Orders seeded-----------//");
 
   process.exit(0);
 };

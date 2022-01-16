@@ -12,20 +12,21 @@ Order.init(
       allowNull: false,
     },
     order_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     order_address: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    worker_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "worker",
-        key: "id",
-      },
-    },
+    // worker_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "worker",
+    //     key: "id",
+    //   },
+    // },
     // user_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
@@ -57,13 +58,13 @@ Order.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    tag_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
+    // tag_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id",
+    //   },
+    // },
     zip: {
       type: DataTypes.STRING,
       allowNull: false,
