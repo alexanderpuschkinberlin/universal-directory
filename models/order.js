@@ -20,13 +20,13 @@ Order.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // worker_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "worker",
-    //     key: "id",
-    //   },
-    // },
+    worker_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "worker",
+        key: "id",
+      },
+    },
     // user_id: {
     //   type: DataTypes.INTEGER,
     //   references: {

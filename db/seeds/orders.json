@@ -8,7 +8,8 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10405",
-    "short_description": "Fix Alarm system"
+    "short_description": "Fix Alarm system",
+    "worker_id": 1
   },
   {
     "order_date": "11.01.2022",
@@ -19,7 +20,8 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10410",
-    "short_description": "Issues with  the door lock"
+    "short_description": "Issues with  the door lock",
+    "worker_id": 1
   },
   {
     "order_date": "12.01.2022",
@@ -30,7 +32,8 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10415",
-    "short_description": "Install Window lockers"
+    "short_description": "Install Window lockers",
+    "worker_id": 2
   },
   {
     "order_date": "09.01.2022",
@@ -41,6 +44,7 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "11405",
-    "short_description": "Issue with the surveliance system"
+    "short_description": "Issue with the surveliance system",
+    "worker_id": 2
   }
 ]

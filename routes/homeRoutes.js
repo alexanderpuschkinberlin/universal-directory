@@ -111,16 +111,19 @@ router.get("/contact", (req, res) => {
 router.get("/placedOrder", async (req, res) => {
   console.log("Rendering orders page", req.session.logged_in);
   try {
-    const orderData = await Order.findAll();
+    const orderData = await Order.findAll({
+      where: {
+        worker_id: req.session.user_id,
+      },
+    });
 
     // Serialize data so the template can read it
     const orders = orderData.map((order) => order.get({ plain: true }));
     // Pass serialized data and session flag into template
-    // const isOwner = comment.user_id == req.session.user_id;
+
     res.render("placedOrder", {
       orders,
-      // is_owner: isOwner,
-      // logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
