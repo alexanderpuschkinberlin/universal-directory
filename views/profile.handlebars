@@ -81,7 +81,6 @@
             <div>{{worker.Contact.address}}</div>
             <div>{{worker.Contact.city}}</div>
             <div>{{worker.Contact.country}}</div>
-            
           </dd>
         </div>
 
@@ -98,16 +97,9 @@
           <dt class="text-sm font-medium text-gray-500">Tags</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               {{!-- placeholder --}}
-            ✔ Door fitting, ✔ Window Fitting, ✔ Alarm Systems
-            {{!-- @Swapnil: How to make it display the tags here --}}
-            <div>{{worker.Tag.name}}</div>
-        
+            <div>✔ {{worker.tag.name}}</div>
           </dd>
         </div>
-
-       
-
-
         <div
           class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
         >
