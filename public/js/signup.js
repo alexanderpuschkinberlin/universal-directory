@@ -32,12 +32,15 @@ const signupFormHandler = async (event) => {
         surname,
         birth_date,
         tag_id,
+        certificate,
+        // years_experience,
+        // about,
       }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      window.location.href = "/homepage";
+      window.location.href = "/";
     } else {
       alert(response.statusText);
     }
