@@ -65,6 +65,7 @@ router.get("/profile/:id", async (req, res) => {
   }
 });
 
+// Rendering login page
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -73,13 +74,18 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// Rendering about us page
 router.get("/aboutus", (req, res) => {
   res.render("aboutus");
 });
 
+// Rendering sign up page
+
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
+
+// Post sign up api
 
 router.post("/signup", async (req, res) => {
   const userData = {
@@ -96,8 +102,14 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+// Rendering contact us page
 router.get("/contact", (req, res) => {
   res.render("contact");
+});
+
+// Rendering Order Page
+router.get("/order", (req, res) => {
+  res.render("order");
 });
 
 module.exports = router;

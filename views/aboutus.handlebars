@@ -1,57 +1,117 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{! <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    /> }}
-    <link rel="stylesheet" href="s" />
-    <title>Universal Directory</title>
-  </head>
-  <body>
+        <svg
+            class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <polygon points="50,0 100,0 50,100 0,100" />
+          </svg>     
+     <main
+            class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+          >
+            <div class="sm:text-center lg:text-left">
+              <h1
+                class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+              >
+                <span class="block xl:inline">Your Directory for </span>
+                <span class="block text-indigo-600 xl:inline"
+                  >Security Experts</span
+                >
+              </h1>
+              <p
+                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              >
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat aliqua.
+              </p>
+                   
+              <div
+                class="mt-5 sm:mt-8 sm:flex flex-wrap-reverse sm:justify-center lg:justify-start"
+              >
+         
+                <div class="mt-3 sm:mt-0 sm:ml-3"></div>
+                {{#each tags as |tag|}}
+                  <a
+                    href="/tagsearch/{{id}}"
+                    class="inline-flex items-center h-8 px-4 m-2 text-sm text-indigo-100 transition-colors duration-150 text-indigo-700 bg-indigo-100 rounded-lg focus:shadow-outline hover:bg-indigo-200"
+                  >
+                    {{name}}
+                  </a>
 
-    <main>
-
-      <div class="container">
-        <div class="columns">
-          <div class="columns mt-6 mr-6">
-            <div class="column is-one-quarter mt-6">
-              <figure class="image is-128x128">
-                <img
-                  class="is-rounded image1"
-                  src="../public/images/pic01.png"
-                />
-              </figure>
-              <figure class="image is-128x128 mt-6">
-                <img
-                  class="is-rounded image1"
-                  src="../public/images/pic02.png"
-                />
-              </figure>
-              <figure class="image is-128x128 mt-6">
-                <img class="is-rounded" src="../public/images/pic03.png" />
-              </figure>
-
+               {{/each}}
+                </div>
+             
+              </div>
+              
             </div>
-          </div>
-          <div class="box is-size-10 mt-6 ml-6">
-            <br />
-            We are professionals of different branches on our way to learn
-            coding. This Project is the outcome of our more than 15 weeks of web
-            development approaches. At this Project we tried to implement our
-            knowldges of MVC concept.
-            <br />
-            Continued
-
-            <br />
-
-            Greetings from the team: Zahra, Alexander and Amir
-          </div>
+          </main>
         </div>
       </div>
-    </main>
+      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <img
+          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+          src="https://images.unsplash.com/flagged/photo-1564767609424-270b9df918e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1546&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+      <div class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <p
+            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl block text-indigo-600"
+          >
+            <span class="block text-indigo-600 xl:inline">
+              Top Security Experts</span
+            >
+          </p>
+        </div>
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap-reverse -m-4">
+                        {{#each tags as |tag|}}
+              <div class="p-4 md:w-1/3">
+                <div
+                  class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+                >
+                  <img
+                    class="lg:h-48 md:h-36 w-full object-cover object-center"
+                    src={{tag.image_url}}
+                    alt="blog"
+                  />
+                  <div class="p-6">
+                    <h2
+                      class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
+                    >
+                    
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      {{name}}
+                    </h1>
+                    <p class="leading-relaxed mb-3">
+                       {{description}}
+                    </p>
+                    <div class="flex  items-center flex-wrap">
+                      <a
+                        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                        >Learn More
+                        
+                      </a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>  
+                  {{/each}}
+            </div>
+                  
+          </div>
+        </section>
+      </div>
+    </div>
 
-  </body>
-</html>
+ 
