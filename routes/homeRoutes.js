@@ -55,6 +55,9 @@ router.get("/profile/:id", async (req, res) => {
         {
           model: Contact,
           attributes: ["address", "city", "country", "contact_number"],
+          // Does this needs to be seperated?
+          // model: Tag,
+          // attributes: ["name"],
         },
       ],
     });
