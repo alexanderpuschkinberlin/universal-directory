@@ -20,9 +20,9 @@
     "express-session": "^1.17.1",
     "foundation-sites": "^6.7.4",
     "handlebars": "^4.7.6",
-    "mysql2": "^2.2.5",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.12.5"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.13"
