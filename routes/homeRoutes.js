@@ -106,6 +106,10 @@ router.post("/signup", async (req, res) => {
 router.get("/contact", (req, res) => {
   res.render("contact");
 });
+// Rendering order page
+router.get("/order", (req, res) => {
+  res.render("order");
+});
 
 // Rendering Order Routes
 router.get("/placedOrder", async (req, res) => {

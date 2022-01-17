@@ -9,7 +9,6 @@ const signupFormHandler = async (event) => {
   const birth_date = document.querySelector("#birth-date").value.trim();
   const years_experience = document.querySelector("#experience").value.trim();
   const about = document.querySelector("#about").value.trim();
-  const certificate = document.querySelector("#certificate").value.trim();
   const tag_id = document.querySelector("#tag-id").value.trim(); // How to loop over tag name to get a tag id
   const password = document.querySelector("#password-signup").value.trim();
 
@@ -32,9 +31,8 @@ const signupFormHandler = async (event) => {
         surname,
         birth_date,
         tag_id,
-        certificate,
-        // years_experience,
-        // about,
+        years_experience,
+        about,
       }),
       headers: { "Content-Type": "application/json" },
     });
