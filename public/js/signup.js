@@ -2,10 +2,10 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector("#username-signup").value.trim();
-  const name = document.querySelector("#name").value.trim();
-  const surname = document.querySelector("#surname").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
+  // const username = document.querySelector("#username-signup").value.trim();
+  const name = document.querySelector("#first-name").value.trim();
+  const surname = document.querySelector("#last-name").value.trim();
+  const email = document.querySelector("#email-address").value.trim();
   const birth_date = document.querySelector("#birth-date").value.trim();
   const years_experience = document.querySelector("#experience").value.trim();
   const about = document.querySelector("#about").value.trim();
@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector("#password-signup").value.trim();
 
   if (
-    username &&
+    // username &&
     email &&
     password &&
     name &&
@@ -24,7 +24,7 @@ const signupFormHandler = async (event) => {
     const response = await fetch("/api/users/signup", {
       method: "POST",
       body: JSON.stringify({
-        username,
+        // username,
         email,
         password,
         name,
