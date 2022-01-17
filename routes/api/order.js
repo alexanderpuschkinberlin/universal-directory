@@ -11,7 +11,6 @@ router.post("/", async (req, res) => {
       order_address: req.body.order_address,
       city: req.body.city,
       country: req.body.country,
-      // tag_id: req.session.tag_id,
       short_description: req.body.short_description,
       email: req.body.email,
       zip: req.body.zip,
