@@ -1,3 +1,11 @@
+const orderPage = document.querySelector("#order-page");
+const workerId = document.querySelector("#id").textContent.trim();
+
+const renderOrder = async (event) => {
+  event.preventDefault();
+  window.location.replace(`/order?workerId=${workerId}`);
+};
+
 const editProfileHandler = async (event) => {
   event.preventDefault();
 
@@ -9,8 +17,8 @@ const editProfileHandler = async (event) => {
   const country = document.querySelector("#country").value.trim();
   const address = document.querySelector("#street-address").value.trim();
   const city = document.querySelector("#city").value.trim();
-
   const data = { id, about, name, surname, email, country, address, city };
+
   if (email) {
     const response = await fetch("/api/users/profile/" + id, {
       method: "PUT",
@@ -29,3 +37,5 @@ const editProfileHandler = async (event) => {
 document
   .querySelector("#save-btn")
   .addEventListener("click", editProfileHandler);
+
+document.getElementById("order-page").addEventListener("click", renderOrder);

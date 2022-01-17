@@ -12,7 +12,7 @@ Order.init(
       allowNull: false,
     },
     order_date: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },

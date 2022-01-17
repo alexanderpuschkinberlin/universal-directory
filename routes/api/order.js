@@ -15,10 +15,11 @@ router.post("/", async (req, res) => {
       short_description: req.session.short_description,
       email: req.session.email,
       zip: req.session.zip,
-      // worker_id: 
+      worker_id: req.session.worker_id,
     });
     res.status(200).json(newOrder);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });

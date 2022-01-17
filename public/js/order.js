@@ -8,13 +8,13 @@ const placeNewOrder = async (event) => {
   const order_address = document.querySelector("#street-address").value.trim();
   const city = document.querySelector("#city").value.trim();
   const country = document.querySelector("#country").value.trim();
-  const tag_id = document.querySelector("#work-type").value.trim();
+  //   const tag_id = document.querySelector("#work-type").value.trim();
   const short_description = document.querySelector("#description").value.trim();
   const email = document.querySelector("#email-address").value.trim();
   const zip = document.querySelector("#postal-code").value.trim();
+  const worker_id = document.querySelector("#workerId").innerHTML;
 
   console.log(
-    "Check inputs!!!!!!",
     first_name,
     last_name,
     order_address,
@@ -44,10 +44,11 @@ const placeNewOrder = async (event) => {
         order_address,
         city,
         country,
-        tag_id,
+        // tag_id,
         short_description,
         email,
         zip,
+        worker_id,
       }),
       headers: {
         "Content-Type": "application/json",

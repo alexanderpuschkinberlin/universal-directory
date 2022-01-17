@@ -119,7 +119,8 @@ router.get("/contact", (req, res) => {
 });
 // Rendering order page
 router.get("/order", (req, res) => {
-  res.render("order");
+  const { workerId } = req.query;
+  res.render("order", { workerId });
 });
 
 // Rendering Order Routes
