@@ -54,7 +54,18 @@ router.get("/profile/:id", async (req, res) => {
       include: [
         {
           model: Contact,
-          attributes: ["address", "city", "country", "contact_number"],
+          attributes: [
+            "address",
+            "city",
+            "country",
+            "contact_number",
+            "latitude",
+            "longitude",
+          ],
+        },
+        {
+          model: Tag,
+          attributes: ["name"],
         },
       ],
     });
