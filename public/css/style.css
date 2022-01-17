@@ -22,3 +22,14 @@
   width: 100%;
   /* The width is the width of the web page */
 }
+.order {
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.placed-oders {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
