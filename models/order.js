@@ -12,8 +12,9 @@ Order.init(
       allowNull: false,
     },
     order_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     order_address: {
       type: DataTypes.STRING,
@@ -26,19 +27,51 @@ Order.init(
         key: "id",
       },
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id",
+    //   },
+    // },
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
       },
     },
-    tag_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    country: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // tag_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id",
+    //   },
+    // },
+    zip: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    short_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {

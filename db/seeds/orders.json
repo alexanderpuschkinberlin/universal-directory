@@ -1,0 +1,50 @@
+[
+  {
+    "order_date": "10.01.2022",
+    "order_address": "Knaakstrasse 3",
+    "first_name": "Zahra",
+    "last_name": "Mammadli",
+    "email": "zahra.mrj@gmail.com",
+    "city": "Berlin",
+    "country": "Germany",
+    "zip": "10405",
+    "short_description": "Fix Alarm system",
+    "worker_id": 1
+  },
+  {
+    "order_date": "11.01.2022",
+    "order_address": "Prenzlauer Allee 4",
+    "first_name": "Alexander",
+    "last_name": "Pushkin",
+    "email": "alexp@gmail.com",
+    "city": "Berlin",
+    "country": "Germany",
+    "zip": "10410",
+    "short_description": "Issues with  the door lock",
+    "worker_id": 1
+  },
+  {
+    "order_date": "12.01.2022",
+    "order_address": "Kollwitzplatz 4",
+    "first_name": "Fyodor",
+    "last_name": "Dostoevski",
+    "email": "fedyaD@gmail.com",
+    "city": "Berlin",
+    "country": "Germany",
+    "zip": "10415",
+    "short_description": "Install Window lockers",
+    "worker_id": 2
+  },
+  {
+    "order_date": "09.01.2022",
+    "order_address": "Augusta Allee 14",
+    "first_name": "Nikolay",
+    "last_name": "Gogol",
+    "email": "deadsouls@gmail.com",
+    "city": "Berlin",
+    "country": "Germany",
+    "zip": "11405",
+    "short_description": "Issue with the surveliance system",
+    "worker_id": 2
+  }
+]

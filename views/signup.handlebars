@@ -1,27 +1,185 @@
-<div>
-  <ul>
+<section class="signup">
+  <div
+    class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+  >
+    <div class="max-w-md w-full space-y-8">
+      <div>
+        <img
+          class="mx-auto h-12 w-auto"
+          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+          alt="Workflow"
+        />
+        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          Sign up to create an account
+        </h2>
+        <p class="mt-2 text-center text-sm text-gray-600">
+          Or
+          <a
+            href="/login"
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+          >
+            Log in Instead
+          </a>
+        </p>
+      </div>
+      <form class="mt-8 space-y-6" id="signup-form" action="#" method="POST">
+        <input type="hidden" name="remember" value="true" />
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <label for="username-login" class="sr-only">Username</label>
+            <input
+              id="username-signup"
+              name="username"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="User Name"
+            />
+          </div>
+          <div>
+            <label for="name" class="sr-only">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Name"
+            />
+          </div>
+          <div>
+            <label for="name" class="sr-only">Surname</label>
+            <input
+              id="surname"
+              name="surname"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Surname"
+            />
+          </div>
+          <div>
+            <label for="email-address" class="sr-only">Email address</label>
+            <input
+              id="email-signup"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Email address"
+            />
+          </div>
+          <div>
+            <label for="birth-date" class="sr-only">Birth Date</label>
+            <input
+              id="birth-date"
+              name="birth-date"
+              type="birth-date"
+              autocomplete="birth-date"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Birth Date"
+            />
+          </div>
+          <div>
+            <label for="years-experience" class="sr-only">Years of Experience</label>
+            <input
+              id="experience"
+              name="experience"
+              type="experience"
+              autocomplete="experience"
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Years of Experience"
+            />
+          </div>
+          <div>
+            <label for="about" class="sr-only">Short description</label>
+            <input
+              id="about"
+              name="about"
+              type="about"
+              autocomplete="about"
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Info About"
+            />
+          </div>
+          <div>
+            <label for="certificate" class="sr-only">Certificate</label>
+            <select
+              id="certificate"
+              name="Certificate"
+              autocomplete="Certificate"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div>
+            <label for="profficiency" class="sr-only">Profficiency</label>
+            <select
+              id="tag-id"
+              name="Profficiency"
+              autocomplete="Profficiency"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
 
-    <label for="name">First Name:</label>
-    <input type="text" id="name" name="name" /><br /><br />
+              {{! <option value="1">Alarm Systems</option>
+              <option value="4">Doors</option>
+              <option value="3">Windows</option>
+              <option value="6">Video Surveliance</option>
+              <option value="5">Fire protection</option>
+              <option value="2">Locking facilities</option> }}
+            </select>
+          </div>
+          <div>
+            <label for="password-login" class="sr-only">Password</label>
+            <input
+              id="password-signup"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Password"
+            />
+          </div>
+        </div>
 
-    <label for="surename">Surename:</label>
-    <input type="text" id="surename" name="surename" /><br /><br />
+        <div>
+          <button
+            type="submit"
+            id="submit"
+            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+              <!-- Heroicon name: solid/lock-closed -->
+              <svg
+                class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" /><br /><br />
-
-    <label for="birth-date">Birth-Date:</label>
-    <input type="text" id="birth-date" name="birth-date" /><br /><br />
-
-    <label for="password">Password:</label>
-    <input type="text" id="password" name="password" /><br /><br />
-
-    <button
-      class="btn btn-primary"
-      id="signupbtn"
-      type="submit"
-    >sign-up</button>
-  </ul>
-</div>
+</section>
 
 <script src="/js/signup.js"></script>
