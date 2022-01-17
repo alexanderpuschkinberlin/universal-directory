@@ -56,9 +56,9 @@ const placeNewOrder = async (event) => {
     });
 
     if (response.ok) {
-      window.location.reload();
+      window.location.href = "/";
     } else {
-      alert("Failed to place an Order!");
+      alert("Failed to place an Order! Please check your inputs");
     }
   }
 };
