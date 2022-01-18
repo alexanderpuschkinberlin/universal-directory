@@ -8,17 +8,17 @@ router.post("/", async (req, res) => {
     const newOrder = await Order.create({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
-      order_address: req.session.order_address,
-      city: req.session.city,
-      country: req.session.country,
-      // tag_id: req.session.tag_id,
-      short_description: req.session.short_description,
-      email: req.session.email,
-      zip: req.session.zip,
-      // worker_id: 
+      order_address: req.body.order_address,
+      city: req.body.city,
+      country: req.body.country,
+      short_description: req.body.short_description,
+      email: req.body.email,
+      zip: req.body.zip,
+      worker_id: req.body.worker_id,
     });
     res.status(200).json(newOrder);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
