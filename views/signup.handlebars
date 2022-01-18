@@ -180,7 +180,7 @@
                           type="text"
                           name="first-name"
                           id="first-name"
-                          autocomplete="given-name"
+                          autocomplete="first-name"
                           class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           value="{{worker.name}}"
                         />
@@ -210,7 +210,7 @@
                           type="text"
                           name="email-address"
                           id="email-address"
-                          autocomplete="email"
+                          autocomplete="email-adress"
                           class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           value="{{worker.email}}"
                         />
@@ -367,7 +367,7 @@
           id="signup-form"
           class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="submit"
-          onclick="toggleModal('modal-id')"
+          {{! onclick="toggleModal('modal-id')" }}
         >
           SIGN UP
         </button>
