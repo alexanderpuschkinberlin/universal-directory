@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const { getCoordinates } = require("../utils/geoLocationHelper");
 
 class Contact extends Model {}
 
@@ -48,6 +49,24 @@ Contact.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        if (!newUserData.latitude) {
+          const { lat, lng } = await getCoordinates(address);
+          newUserData.longitude = lng;
+          newUserData.latitude = lat;
+        }
+        return newUserData;
+      },
+      beforeUpdate: async (newUserData) => {
+        if (!newUserData.latitude) {
+          const { lat, lng } = await getCoordinates(address);
+          newUserData.longitude = lng;
+          newUserData.latitude = lat;
+        }
+        return newUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,

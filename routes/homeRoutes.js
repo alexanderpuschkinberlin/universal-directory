@@ -39,7 +39,7 @@ router.get("/tagsearch/:id", async (req, res) => {
     // Pass serialized data and session flag into template
     res.render("tagsearch", {
       tags,
-      //   logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -70,7 +70,7 @@ router.get("/profile/:id", async (req, res) => {
       ],
     });
     const worker = workerData.get({ plain: true });
-    res.render("profile", { worker });
+    res.render("profile", { worker, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -87,7 +87,7 @@ router.get("/login", (req, res) => {
 
 // Rendering about us page
 router.get("/aboutus", (req, res) => {
-  res.render("aboutus");
+  res.render("aboutus", { logged_in: req.session.logged_in });
 });
 
 // Rendering sign up page
@@ -115,12 +115,12 @@ router.post("/signup", async (req, res) => {
 
 // Rendering contact us page
 router.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", { logged_in: req.session.logged_in });
 });
 // Rendering order page
 router.get("/order", (req, res) => {
   const { workerId } = req.query;
-  res.render("order", { workerId });
+  res.render("order", { workerId, logged_in: req.session.logged_in });
 });
 
 // Rendering Order Routes
