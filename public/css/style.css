@@ -45,3 +45,41 @@
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.about-us {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#Zahra {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  object-position: 90% 10%;
+}
+#Amir {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  object-position: 90% 10%;
+}
+#Alex {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  object-position: 90% 10%;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.profile-quote {
+  align-self: center;
+  padding-left: 5vw;
+}
+
+p {
+  color: rgb(107 114 128);
+}
