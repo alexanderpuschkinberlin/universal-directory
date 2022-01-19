@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node seeds/seed.js && node server.js",
+    "start": "node db/seeds/seed.js && node server.js",
     "seed": "node db/seeds/seed.js",
     "dev": "nodemon ./server.js"
   },
