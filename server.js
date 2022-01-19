@@ -1,6 +1,7 @@
 // Dependencies
 const path = require("path");
 const express = require("express");
+const fileUpload = require("express-fileupload");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./routes");
@@ -32,6 +33,7 @@ const sess = {
   }),
 };
 
+app.use(fileUpload());
 app.use(session(sess));
 
 // Set Handlebars as the default template engine.
