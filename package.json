@@ -2,7 +2,10 @@
   "name": "museum-paintings",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  // "main": "server.js",
+  "engines": {
+    "node": v16.13.0
+  }
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node seeds/seed.js && node server.js",
@@ -28,5 +31,10 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.0.13"
+  },
+  
+  "optionalDependencies": {
+      "fsevents": "2.1.2"
   }
+  
 }
