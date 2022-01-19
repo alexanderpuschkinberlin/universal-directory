@@ -101,15 +101,13 @@ router.get("/signup", (req, res) => {
 router.post("/signup", async (req, res) => {
   const userData = {
     ...req.body,
-    birth_date: req.body.birthDate,
   };
   console.log(userData);
   try {
     const users = await User.create(userData);
-    res.render("login");
+    res.status(200).json(users);
   } catch (error) {
-    console.log(error);
-    res.render("login");
+    res.status(500).json(error);
   }
 });
 

@@ -269,7 +269,7 @@
                         <input
                           type="text"
                           name="about"
-                          id="about"
+                          id="about-signup"
                           autocomplete="about"
                           class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           value="{{worker.about}}"
@@ -295,15 +295,22 @@
                         <label
                           for="tag-id"
                           class="block text-sm font-medium text-gray-700"
-                        >ID</label>
-                        <input
-                          type="text"
-                          name="tag-id"
+                        >Tag</label>
+                        <select
                           id="tag-id"
-                          autocomplete="tag-id"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                          value="{{worker.tag-id}}"
-                        />
+                          name="Profficiency"
+                          autocomplete="Profficiency"
+                          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        >
+
+                          <option value="1">Alarm Systems</option>
+                          <option value="4">Doors</option>
+                          <option value="3">Windows</option>
+                          <option value="6">Video Surveliance</option>
+                          <option value="5">Fire protection</option>
+                          <option value="2">Locking facilities</option>
+                        </select>
+
                       </div>
 
                       <div class="col-span-6">
@@ -355,6 +362,7 @@
       <!--footer-->
       <div
         class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b"
+        id="button-container"
       >
         <button
           class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -366,7 +374,6 @@
         <button
           id="signup-form"
           class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="submit"
           {{! onclick="toggleModal('modal-id')" }}
         >
           SIGN UP
