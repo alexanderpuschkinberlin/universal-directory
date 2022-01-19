@@ -21,6 +21,7 @@
     "foundation-sites": "^6.7.4",
     "handlebars": "^4.7.6",
     "mysql2": "^2.3.3",
+    "node-nlp": "^4.22.9",
     "nodemon": "^2.0.15",
     "sequelize": "^6.12.5"
   },
