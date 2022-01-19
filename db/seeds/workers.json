@@ -19,7 +19,7 @@
     "password": "abby01",
     "years_experience": 4,
     "certificate": "true",
-    "tag_id": 1,
+    "tag_id": 3,
     "about": "I will commit to deliver you superior service",
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
@@ -43,20 +43,20 @@
     "password": "enda01",
     "years_experience": 3,
     "certificate": "true",
-    "tag_id": 1,
+    "tag_id": 3,
     "about": "All you need is here!",
     "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
   },
   {
-    "name": "Montie",
-    "surname": "Burns",
-    "email": "test1@montie.com",
+    "name": "Marge",
+    "surname": "Simpsons",
+    "email": "test3@margie.com",
     "birth_date": "20.12.1955",
     "password": "montie01",
     "years_experience": 4,
     "certificate": "true",
     "tag_id": 2,
-    "about": "I will please my customers with great work",
+    "about": "I am offering the best service for the past 2 years",
     "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
   },
   {
@@ -67,7 +67,7 @@
     "password": "abby01",
     "years_experience": 5,
     "certificate": "true",
-    "tag_id": 2,
+    "tag_id": 1,
     "about": "I want to quit, but need money so please order my services :) ",
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
@@ -92,7 +92,7 @@
     "years_experience": 4,
     "certificate": "true",
     "tag_id": 3,
-    "about": "I too serious for this bullshit ))))",
+    "about": "I am too serious for this bullshit ))))",
     "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
   },
   {
