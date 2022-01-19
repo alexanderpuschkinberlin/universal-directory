@@ -50,6 +50,24 @@ router.put("/profile/:id", async (req, res) => {
       city: req.body.city,
     },
   };
+  console.log(req.session);
+  if (!req.files) {
+    console.log("No files uploaded");
+  } else {
+    const file = req.files.upload_image;
+    worker.image_url = "/images/upload_images/" + req.session.id + file.name;
+    file.mv(
+      "public/images/upload_images/" + req.session.id + file.name,
+      function (err) {
+        if (err) {
+          console.log("Error while moving the file");
+        } else {
+          console.log("File uploaded successfully");
+        }
+      }
+    );
+  }
+
   console.log(worker);
   try {
     //Update worker profile and contact
