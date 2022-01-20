@@ -104,6 +104,4 @@ open the url by ctrl+click
 
 #### Screenshots
 
-- Index page ![Image](./assets/images/IndexPage.png)
-
-- Home Page ![Image](./assets/images/AboutUs.png)
+- Home Page ![Image](./public/images/universal_directory)
