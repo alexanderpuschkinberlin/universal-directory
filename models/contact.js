@@ -44,7 +44,11 @@ Contact.init(
       allowNull: false,
     },
     city: {
-      type: DataTypes.STRING, // how to make a dropdown list????
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    zip_code: {
+      type: DataTypes.STRING,
       allowNull: true,
     },
   },

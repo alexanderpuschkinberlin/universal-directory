@@ -9,7 +9,7 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector("#email-address").value.trim();
   const birthDate = document.querySelector("#birth-date").value.trim();
   const yearsExperience = document.querySelector("#experience").value.trim();
-  const about = document.querySelector("#about-signup").value.trim();
+  const about = document.querySelector("#about").value.trim();
   const tagId = document.querySelector("#tag-id").value.trim(); // How to loop over tag name to get a tag id
   const password = document.querySelector("#password-signup").value.trim();
   const city = document.querySelector("#city").value.trim();

@@ -7,7 +7,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.539386",
-    "longitude": "13.413711"
+    "longitude": "13.413711",
+    "zip_code": "10405"
   },
   {
     "worker_id": 2,
@@ -17,7 +18,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.541016",
-    "longitude": "13.415524"
+    "longitude": "13.415524",
+    "zip_code": "10120"
   },
   {
     "worker_id": 3,
@@ -27,7 +29,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.526393",
-    "longitude": "13.320820"
+    "longitude": "13.320820",
+    "zip_code": "10119"
   },
   {
     "worker_id": 4,
@@ -37,7 +40,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.530507",
-    "longitude": "13.419452"
+    "longitude": "13.419452",
+    "zip_code": "10410"
   },
   {
     "worker_id": 5,
@@ -47,7 +51,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.530428",
-    "longitude": "13.414808"
+    "longitude": "13.414808",
+    "zip_code": "10420"
   },
   {
     "worker_id": 6,
@@ -57,7 +62,8 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.530507",
-    "longitude": "13.419452"
+    "longitude": "13.419452",
+    "zip_code": "10411"
   },
   {
     "worker_id": 7,
@@ -67,6 +73,7 @@
     "country": "Germany",
     "city": "Berlin",
     "latitude": "52.536318",
-    "longitude": "13.416934"
+    "longitude": "13.416934",
+    "zip_code": "10406"
   }
 ]

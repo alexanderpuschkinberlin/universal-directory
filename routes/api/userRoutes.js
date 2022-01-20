@@ -48,6 +48,7 @@ router.put("/profile/:id", async (req, res) => {
       address: req.body.address,
       country: req.body.country,
       city: req.body.city,
+      zip_code: req.body.zip_code,
     },
   };
   console.log(req.session);
