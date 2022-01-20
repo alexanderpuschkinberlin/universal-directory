@@ -3,7 +3,6 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  // const username = document.querySelector("#username-signup").value.trim();
   const name = document.querySelector("#first-name").value.trim();
   const surname = document.querySelector("#last-name").value.trim();
   const email = document.querySelector("#email-address").value.trim();
@@ -13,6 +12,7 @@ const signupFormHandler = async (event) => {
   const tagId = document.querySelector("#tag-id").value.trim(); // How to loop over tag name to get a tag id
   const password = document.querySelector("#password-signup").value.trim();
   const city = document.querySelector("#city").value.trim();
+  const fileName = document.querySelector("#file-upload").files[0];
 
   if (
     name &&
@@ -23,7 +23,8 @@ const signupFormHandler = async (event) => {
     about &&
     tagId &&
     password &&
-    city
+    city &&
+    fileName
   ) {
     const response = await fetch("/api/users/signup", {
       method: "POST",
@@ -37,6 +38,7 @@ const signupFormHandler = async (event) => {
         tag_id: tagId,
         password,
         city,
+        upload_image: fileName,
       }),
       headers: { "Content-Type": "application/json" },
     });
@@ -48,7 +50,7 @@ const signupFormHandler = async (event) => {
   } else {
     document
       .querySelector("#button-container")
-      .appendChild(document.createTextNode("PLease fill all the fields"));
+      .appendChild(document.createTextNode("Please fill all the fields"));
   }
 };
 

@@ -90,15 +90,32 @@ router.put("/profile/:id", async (req, res) => {
 });
 // create new Worker
 router.post("/signup", async (req, res) => {
+  const userData = {
+    ...req.body,
+  };
+  console.log(req.files);
+  const file = req.files.file - upload;
+  userData.image_url = "/images/upload_images/" + uuidv4() + file.name;
+  file.mv(
+    "public/images/upload_images/" + uuidv4() + file.name,
+    function (err) {
+      if (err) {
+        console.log("Error while moving the file");
+      } else {
+        console.log("File uploaded successfully");
+      }
+    }
+  );
+
   try {
-    const userData = await Worker.create(req.body);
-    console.log(userData);
+    const newUserData = await Worker.create(userData);
+
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.username = userData.username;
+      req.session.user_id = newUserData.id;
+      req.session.username = newUserData.username;
       req.session.logged_in = true;
 
-      res.status(200).json(userData);
+      res.status(200).json(newUserData);
     });
   } catch (err) {
     console.log(err);

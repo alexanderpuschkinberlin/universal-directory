@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { request } = require("express");
+const { v4: uuidv4 } = require("uuid");
 // const { Model } = require("sequelize/types");
 const { Worker, User, Tag, Contact, Order } = require("../models");
 const withAuth = require("../utils/auth");
@@ -57,6 +58,7 @@ router.get("/profile/:id", async (req, res) => {
           attributes: [
             "address",
             "city",
+            "zip_code",
             "country",
             "contact_number",
             "latitude",
@@ -97,21 +99,6 @@ router.get("/signup", (req, res) => {
 });
 
 // Post sign up api
-
-router.post("/signup", async (req, res) => {
-  const userData = {
-    ...req.body,
-    birth_date: req.body.birthDate,
-  };
-  console.log(userData);
-  try {
-    const users = await User.create(userData);
-    res.render("login");
-  } catch (error) {
-    console.log(error);
-    res.render("login");
-  }
-});
 
 // Rendering contact us page
 router.get("/contact", (req, res) => {
