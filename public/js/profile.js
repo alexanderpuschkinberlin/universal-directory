@@ -16,6 +16,7 @@ const editProfileHandler = async (event) => {
   const email = document.querySelector("#email-address").value.trim();
   const country = document.querySelector("#country").value.trim();
   const address = document.querySelector("#street-address").value.trim();
+  const zipcode = document.querySelector("#zipcode").value.trim();
   const city = document.querySelector("#city").value.trim();
   const fileName = document.querySelector("#file-upload").files[0];
   const data = { id, about, name, surname, email, country, address, city };
@@ -30,6 +31,7 @@ const editProfileHandler = async (event) => {
     formData.append("email", email);
     formData.append("country", country);
     formData.append("address", address);
+    formData.append("zip_code", zipcode);
     formData.append("city", city);
     const response = await fetch("/api/users/profile/" + id, {
       method: "PUT",

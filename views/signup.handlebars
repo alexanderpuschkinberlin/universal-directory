@@ -258,20 +258,8 @@
                           <option selected>{{worker.Contact.country}}</option>
                         </select>
                       </div>
-                      <div class="col-span-6">
-                        <label
-                          for="about"
-                          class="block text-sm font-medium text-gray-700"
-                        >About</label>
-                        <input
-                          type="text"
-                          name="about"
-                          id="about-signup"
-                          autocomplete="about"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                          value="{{worker.about}}"
-                        />
-                      </div>
+
+                 
 
                       <div class="col-span-6">
                         <label
@@ -285,6 +273,21 @@
                           autocomplete="street-address"
                           class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                           value="{{worker.Contact.address}}"
+                        />
+                      </div>
+
+                           <div class="col-span-6">
+                        <label
+                          for="zipcode"
+                          class="block text-sm font-medium text-gray-700"
+                        >Zip Code</label>
+                        <input
+                          type="text"
+                          name="zipcode"
+                          id="zipcode"
+                          autocomplete="zipcode"
+                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          value="{{worker.zip_code}}"
                         />
                       </div>
 
