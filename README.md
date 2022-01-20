@@ -69,7 +69,7 @@ open the url by ctrl+click
 
 - HTML
 - CSS
-- Bulma, Modern CSS
+- Tailwindcss
 - JavaScript
 - jQuery
 - Express
