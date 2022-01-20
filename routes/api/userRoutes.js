@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Worker, Contact } = require("../../models");
+const { v4: uuidv4 } = require("uuid");
 
 router.post("/login", async (req, res) => {
   try {
@@ -94,18 +95,24 @@ router.post("/signup", async (req, res) => {
     ...req.body,
   };
   console.log(req.files);
-  const file = req.files.file - upload;
-  userData.image_url = "/images/upload_images/" + uuidv4() + file.name;
-  file.mv(
-    "public/images/upload_images/" + uuidv4() + file.name,
-    function (err) {
-      if (err) {
-        console.log("Error while moving the file");
-      } else {
-        console.log("File uploaded successfully");
+  if (!req.files) {
+    console.log("No files uploaded");
+  } else {
+    const randomId = uuidv4();
+    const file = req.files.upload_image;
+
+    userData.image_url = "/images/upload_images/" + randomId + file.name;
+    file.mv(
+      "public/images/upload_images/" + randomId + file.name,
+      function (err) {
+        if (err) {
+          console.log("Error while moving the file");
+        } else {
+          console.log("File uploaded successfully");
+        }
       }
-    }
-  );
+    );
+  }
 
   try {
     const newUserData = await Worker.create(userData);
