@@ -56,14 +56,20 @@ Contact.init(
     hooks: {
       beforeCreate: async (newUserData) => {
         if (!newUserData.latitude) {
+          const address = `${newUserData.address}, ${newUserData.city}, ${newUserData.country}, ${newUserData.zip_code}`;
           const { lat, lng } = await getCoordinates(address);
+          console.log(
+            `Addres: ${address} Longitude : ${lng} Lattitude: ${lat}`
+          );
           newUserData.longitude = lng;
           newUserData.latitude = lat;
         }
         return newUserData;
       },
       beforeUpdate: async (newUserData) => {
+        console.log("********Lat", newUserData.latitude);
         if (!newUserData.latitude) {
+          const address = `${newUserData.address}, ${newUserData.city}, ${newUserData.country}, ${newUserData.zip_code}`;
           const { lat, lng } = await getCoordinates(address);
           newUserData.longitude = lng;
           newUserData.latitude = lat;

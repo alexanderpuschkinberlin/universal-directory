@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Worker, Contact } = require("../../models");
 const { v4: uuidv4 } = require("uuid");
+const { getCoordinates } = require("../../utils/geoLocationHelper");
 
 router.post("/login", async (req, res) => {
   try {
@@ -78,6 +79,14 @@ router.put("/profile/:id", async (req, res) => {
         id: worker.id,
       },
     });
+
+    let contactInfo = worker.Contact;
+    if (!contactInfo.latitude) {
+      const address = `${contactInfo.address}, ${contactInfo.city}, ${contactInfo.country}, ${contactInfo.zip_code}`;
+      const { lat, lng } = await getCoordinates(address);
+      worker.Contact.longitude = lng;
+      worker.Contact.latitude = lat;
+    }
     // Update contact separately
     await Contact.update(worker.Contact, {
       where: {
@@ -93,6 +102,12 @@ router.put("/profile/:id", async (req, res) => {
 router.post("/signup", async (req, res) => {
   const userData = {
     ...req.body,
+    Contact: {
+      address: req.body.address,
+      country: req.body.country,
+      city: req.body.city,
+      zip_code: req.body.zip_code,
+    },
   };
   console.log(req.files);
   if (!req.files) {
@@ -116,7 +131,16 @@ router.post("/signup", async (req, res) => {
 
   try {
     const newUserData = await Worker.create(userData);
+    /* Update contact */
 
+    let contactInfo = userData.Contact;
+    const address = `${contactInfo.address}, ${contactInfo.city}, ${contactInfo.country}, ${contactInfo.zip_code}`;
+    const { lat, lng } = await getCoordinates(address);
+    userData.Contact.longitude = lng;
+    userData.Contact.latitude = lat;
+    userData.Contact.worker_id = newUserData.id;
+    // Update contact separately
+    await Contact.create(userData.Contact);
     req.session.save(() => {
       req.session.user_id = newUserData.id;
       req.session.username = newUserData.username;

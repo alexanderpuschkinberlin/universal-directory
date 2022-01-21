@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Order } = require("../../models");
-const { msg } = require("../../utils/msg");
+// const { msg } = require("../../utils/msg");
 
 // create new order
 router.post("/", async (req, res) => {
@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
       worker_id: req.body.worker_id,
       status: "Active",
     });
-    msg(req.body.first_name);
+    // msg(req.body.first_name);
     res.status(200).json(newOrder);
   } catch (err) {
     console.log(err);
