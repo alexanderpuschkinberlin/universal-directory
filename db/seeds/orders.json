@@ -8,6 +8,7 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10405",
+    "status": "Active",
     "short_description": "Fix Alarm system",
     "worker_id": 1
   },
@@ -20,6 +21,7 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10410",
+    "status": "Active",
     "short_description": "Issues with  the door lock",
     "worker_id": 1
   },
@@ -32,6 +34,7 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "10415",
+    "status": "In Progress",
     "short_description": "Install Window lockers",
     "worker_id": 2
   },
@@ -44,6 +47,7 @@
     "city": "Berlin",
     "country": "Germany",
     "zip": "11405",
+    "status": "In Progress",
     "short_description": "Issue with the surveliance system",
     "worker_id": 2
   }
