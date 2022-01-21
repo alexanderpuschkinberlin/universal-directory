@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       tags,
       logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -41,10 +42,18 @@ router.get("/tagsearch/:id", async (req, res) => {
     res.render("tagsearch", {
       tags,
       logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/profile", (req, res) => {
+  res.render("profile", {
+    logged_in: req.session.logged_in,
+    user_id: req.session.user_id,
+  });
 });
 
 // Rendering profile of the worker
@@ -72,7 +81,16 @@ router.get("/profile/:id", async (req, res) => {
       ],
     });
     const worker = workerData.get({ plain: true });
-    res.render("profile", { worker, logged_in: req.session.logged_in });
+    is_edit = false;
+    if (req.session.user_id === worker.id) {
+      is_edit = true;
+    }
+    res.render("profile", {
+      worker,
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+      is_edit,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -89,7 +107,10 @@ router.get("/login", (req, res) => {
 
 // Rendering about us page
 router.get("/aboutus", (req, res) => {
-  res.render("aboutus", { logged_in: req.session.logged_in });
+  res.render("aboutus", {
+    logged_in: req.session.logged_in,
+    user_id: req.session.user_id,
+  });
 });
 
 // Rendering sign up page
@@ -102,12 +123,19 @@ router.get("/signup", (req, res) => {
 
 // Rendering contact us page
 router.get("/contact", (req, res) => {
-  res.render("contact", { logged_in: req.session.logged_in });
+  res.render("contact", {
+    logged_in: req.session.logged_in,
+    user_id: req.session.user_id,
+  });
 });
 // Rendering order page
 router.get("/order", (req, res) => {
   const { workerId } = req.query;
-  res.render("order", { workerId, logged_in: req.session.logged_in });
+  res.render("order", {
+    workerId,
+    logged_in: req.session.logged_in,
+    user_id: req.session.user_id,
+  });
 });
 
 // Rendering Order Routes
@@ -127,6 +155,7 @@ router.get("/placedOrder", async (req, res) => {
     res.render("placedOrder", {
       orders,
       logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
