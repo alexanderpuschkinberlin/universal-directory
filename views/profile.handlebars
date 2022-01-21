@@ -178,11 +178,11 @@
 
   {{!-- Modal to edit profile --}}
 
-
-  {{!-- <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button" onclick="toggleModal('modal-id')">
+  {{#if is_edit}}
+  <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button" onclick="toggleModal('modal-id')">
   Edit Profile
-</button> --}}
-
+  </button>
+{{/if}}
 <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
   <div class="relative w-auto my-6 mx-auto max-w-3xl">
     <!--content-->

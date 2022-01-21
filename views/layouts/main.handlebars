@@ -82,18 +82,12 @@
                   {{#if logged_in}}
 
                     <a
-                      href="/profile"
+                      href="/profile/{{user_id}}"
                       class="font-medium text-gray-500 hover:text-gray-900"
                       id="profile"
                       >Profile</a
                     >
-                    
-                    <button class="font-medium text-gray-500 hover:text-gray-900"
-                      id="profile"
-                      onclick="toggleModal('modal-id')"
-                      >Edit Profile</button
-                    >
-               
+
                     <a
                       href="/logout"
                       class="font-medium text-gray-500 hover:text-gray-900"
