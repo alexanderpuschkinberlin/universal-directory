@@ -83,3 +83,16 @@
 p {
   color: rgb(107 114 128);
 }
+
+select,
+option {
+  background: #fff;
+}
+select.active,
+option[value="active"] {
+  background: red;
+}
+select.done,
+option[value="done"] {
+  background: green;
+}

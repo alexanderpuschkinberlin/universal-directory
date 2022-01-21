@@ -21,7 +21,7 @@
     "certificate": "true",
     "tag_id": 3,
     "about": "I will commit to deliver you superior service",
-    "image_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    "image_url": "https://images.unsplash.com/photo-1614213951697-a45781262acf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   },
   {
     "name": "Barnie",
@@ -98,13 +98,37 @@
   {
     "name": "Kent",
     "surname": "Rbockman",
-    "email": "test6@aalchoholic.com",
+    "email": "test8@aalchoholic.com",
     "birth_date": "20.05.1977",
-    "password": "barnie06",
+    "password": "barnie08",
     "years_experience": 7,
     "certificate": "true",
     "tag_id": 3,
     "about": "It is obvious that our project need to get A+!!!",
-    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpghttps://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    "image_url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "name": "Milhouse",
+    "surname": "Van Houten",
+    "email": "test7@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "barnie07",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 1,
+    "about": "It is obvious that our project need to get A+!!!",
+    "image_url": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "name": "Patty",
+    "surname": "Bouvier",
+    "email": "test9@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "pattie07",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 2,
+    "about": "It is obvious that our project need to get A+!!!",
+    "image_url": "https://images.unsplash.com/photo-1507114845806-0347f6150324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
   }
 ]
