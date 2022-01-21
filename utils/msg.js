@@ -2,7 +2,7 @@ const { WebClient } = require("@slack/web-api");
 
 // Read a token from the environment variables
 // const token = process.env.SLACK_TOKEN;
-const token = "xoxb-3013469989952-2986852834565-iSaue3NgBtNpbU3B7IfqwP5F";
+const token = "xoxb-3013469989952-2986852834565-vJ0S2kDYp8ccoVe1WaDOCsvD";
 
 // Initialize
 const web = new WebClient(token);
@@ -11,11 +11,11 @@ const web = new WebClient(token);
 // const conversationId = "@sgaikwad";
 const conversationId = "#orders";
 
-const msg = (async () => {
+const msg = async (input) => {
   // Post a message to the channel, and await the result.
   // Find more arguments and details of the response: https://api.slack.com/methods/chat.postMessage
   const result = await web.chat.postMessage({
-    text: "hellow world",
+    text: input,
     channel: conversationId,
   });
 
@@ -23,9 +23,6 @@ const msg = (async () => {
   console.log(
     `Successfully send message ${result.ts} in conversation ${conversationId}`
   );
-})();
+};
 
 module.exports = { msg };
-//https://thecodebarbarian.com/working-with-the-slack-api-in-node-js.html
-
-// Bot user OAuth Token : xoxb-3013469989952-2986852834565-iSaue3NgBtNpbU3B7IfqwP5F

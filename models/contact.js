@@ -33,7 +33,7 @@ Contact.init(
     },
     contact_number: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     time_availability: {
       type: DataTypes.STRING, // is it ok to have time availability in string
