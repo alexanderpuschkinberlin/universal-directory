@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
       email: req.body.email,
       zip: req.body.zip,
       worker_id: req.body.worker_id,
+      status: "Active",
     });
     res.status(200).json(newOrder);
   } catch (err) {
@@ -24,18 +25,29 @@ router.post("/", async (req, res) => {
 });
 
 // delete order
-router.delete("/:id", withAuth, (req, res) => {
-  Order.destroy({
-    where: {
-      id: req.params.id,
+router.put("/:id", (req, res) => {
+  console.log("Updating " + req.params.id + " to " + req.body.status);
+  Order.update(
+    {
+      status: req.body.status,
     },
-  }).then((orderData) => {
-    if (!orderData) {
-      res.status(404).json({ message: "No order found with this ID" });
-      return;
+    {
+      where: {
+        id: req.params.id,
+      },
     }
-    res.json(orderData);
-  });
+  )
+    .then((orderStatus) => {
+      if (!orderStatus) {
+        res.status(404).json({ message: "No order found with this ID." });
+        return;
+      }
+      res.json(orderStatus);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

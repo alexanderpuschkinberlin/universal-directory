@@ -1,5 +1,5 @@
     {{!-- {{#if is_owner}} --}}
-    
+
         <svg
             class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
             fill="currentColor"
@@ -26,7 +26,7 @@
               >
                 Dear Locksmiths. Please check below, orders placed by our customers. Once you choosed particular order please click on.....
               </p>
-                
+
               </div>
                </div>
           </main>
@@ -56,7 +56,13 @@
                   scope="col"
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                  Name
+                  ID
+                </th>
+               <th
+                  scope="col"
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
+                 Name
                 </th>
                 <th
                   scope="col"
@@ -87,7 +93,7 @@
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
                   Country
-                </th>                
+                </th>
                 <th scope="col" class="relative px-6 py-3">
                   <span class="sr-only">Edit</span>
                 </th>
@@ -96,16 +102,12 @@
          {{#each orders as |order|}}
             <tbody class="bg-white divide-y divide-gray-200">
               <tr>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" class = "orderId">
+                 {{id}}
+                </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="flex items-center">
-                    {{!-- <div class="flex-shrink-0 h-10 w-10">
-                      <img
-                        class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                        alt=""
-                      />
-                    </div> --}}
-                    <div class="ml-4">
+                     <div class="ml-4">
                       <div class="text-sm font-medium text-gray-900">
                         {{first_name}}  {{last_name}}
                       </div>
@@ -116,18 +118,21 @@
 
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap"> 
+                <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-500">{{short_description}}</div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-6 py-4 whitespace-nowrap" id = "order-status">
                   <span
                     class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
                   >
-                  <select id="order-status" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                   <option value= "active">Active</option> 
-                   <option value= "inProgress">In Progress</option>
-                   <option value= "done">Done</option>
+                  <div id = "order-status">
+                  <select onchange="changestatus({{id}})" id="status-{{id}}" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                   <option value= "status">{{status}}</option>
+                   <option value= "Active">Active</option>
+                   <option value= "In Progress">In Progress</option>
+                   <option value= "Done">Done</option>
                    </select>
+                   </div>
                   </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -151,7 +156,7 @@
   </div>
 </div>
 
-     <script src="/js/deleteOrder.js"></script>
+     <script src="/js/updateOrder.js"></script>
 
 
      {{!-- {{/if}} --}}

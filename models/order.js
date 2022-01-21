@@ -69,6 +69,10 @@ Order.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     short_description: {
       type: DataTypes.STRING,
       allowNull: false,
