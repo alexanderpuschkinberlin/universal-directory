@@ -96,3 +96,8 @@ select.done,
 option[value="done"] {
   background: green;
 }
+
+.profile-footer {
+  display: flex;
+  justify-content: left;
+}
