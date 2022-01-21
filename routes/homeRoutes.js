@@ -47,6 +47,10 @@ router.get("/tagsearch/:id", async (req, res) => {
   }
 });
 
+router.get("/profile", (req, res) => {
+  res.render("profile");
+});
+
 // Rendering profile of the worker
 router.get("/profile/:id", async (req, res) => {
   try {
