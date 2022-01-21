@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Worker, Contact } = require("../../models");
+const { v4: uuidv4 } = require("uuid");
 
 router.post("/login", async (req, res) => {
   try {
@@ -90,15 +91,38 @@ router.put("/profile/:id", async (req, res) => {
 });
 // create new Worker
 router.post("/signup", async (req, res) => {
+  const userData = {
+    ...req.body,
+  };
+  console.log(req.files);
+  if (!req.files) {
+    console.log("No files uploaded");
+  } else {
+    const randomId = uuidv4();
+    const file = req.files.upload_image;
+
+    userData.image_url = "/images/upload_images/" + randomId + file.name;
+    file.mv(
+      "public/images/upload_images/" + randomId + file.name,
+      function (err) {
+        if (err) {
+          console.log("Error while moving the file");
+        } else {
+          console.log("File uploaded successfully");
+        }
+      }
+    );
+  }
+
   try {
-    const userData = await Worker.create(req.body);
-    console.log(userData);
+    const newUserData = await Worker.create(userData);
+
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.username = userData.username;
+      req.session.user_id = newUserData.id;
+      req.session.username = newUserData.username;
       req.session.logged_in = true;
 
-      res.status(200).json(userData);
+      res.status(200).json(newUserData);
     });
   } catch (err) {
     console.log(err);

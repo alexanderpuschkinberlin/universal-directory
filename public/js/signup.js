@@ -3,7 +3,6 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  // const username = document.querySelector("#username-signup").value.trim();
   const name = document.querySelector("#first-name").value.trim();
   const surname = document.querySelector("#last-name").value.trim();
   const email = document.querySelector("#email-address").value.trim();
@@ -13,6 +12,10 @@ const signupFormHandler = async (event) => {
   const tagId = document.querySelector("#tag-id").value.trim(); // How to loop over tag name to get a tag id
   const password = document.querySelector("#password-signup").value.trim();
   const city = document.querySelector("#city").value.trim();
+  const fileName = document.querySelector("#file-upload").files[0];
+  const country = document.querySelector("#country").value.trim();
+  const address = document.querySelector("#street-address").value.trim();
+  const zipcode = document.querySelector("#zipcode").value.trim();
 
   if (
     name &&
@@ -23,22 +26,27 @@ const signupFormHandler = async (event) => {
     about &&
     tagId &&
     password &&
-    city
+    city &&
+    fileName
   ) {
+    let formData = new FormData();
+    formData.append("upload_image", fileName);
+    formData.append("about", about);
+    formData.append("name", name);
+    formData.append("surname", surname);
+    formData.append("email", email);
+    formData.append("country", country);
+    formData.append("address", address);
+    formData.append("password", password);
+    formData.append("birth_date", birthDate);
+    formData.append("zip_code", zipcode);
+    formData.append("tag_id", tagId);
+    formData.append("years_experience", yearsExperience);
+    formData.append("city", city);
+
     const response = await fetch("/api/users/signup", {
       method: "POST",
-      body: JSON.stringify({
-        name,
-        surname,
-        email,
-        birth_date: birthDate,
-        years_experience: yearsExperience,
-        about,
-        tag_id: tagId,
-        password,
-        city,
-      }),
-      headers: { "Content-Type": "application/json" },
+      body: formData,
     });
     if (response.ok) {
       window.location.href = "/";
@@ -48,7 +56,7 @@ const signupFormHandler = async (event) => {
   } else {
     document
       .querySelector("#button-container")
-      .appendChild(document.createTextNode("PLease fill all the fields"));
+      .appendChild(document.createTextNode("Please fill all the fields"));
   }
 };
 

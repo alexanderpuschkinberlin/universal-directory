@@ -20,6 +20,7 @@ const editProfileHandler = async (event) => {
   const city = document.querySelector("#city").value.trim();
   const fileName = document.querySelector("#file-upload").files[0];
   const data = { id, about, name, surname, email, country, address, city };
+  console.log(fileName);
 
   if (email) {
     let formData = new FormData();

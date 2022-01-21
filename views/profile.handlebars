@@ -317,6 +317,52 @@
                 <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="{{worker.email}}">
               </div>
 
+               {{!-- PWD Start  --}}
+               <div class="col-span-6">
+                <label for="password-signup" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="text" name="password-signup" id="password-signup" autocomplete="birth-date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Add new password to update">
+              </div>
+
+              {{!-- PWD END  --}}
+
+              {{!-- Birth date --}}
+
+               <div class="col-span-6">
+                <label for="birth-date" class="block text-sm font-medium text-gray-700">Birth Date</label>
+                <input type="text" name="birth-date" id="birth-date" autocomplete="birth-date" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="{{worker.birth_date}}">
+              </div>
+
+              {{!-- Birth date end --}}
+
+              {{!-- Experience  start --}}
+
+              <div class="col-span-6">
+                <label for="experience" class="block text-sm font-medium text-gray-700">Experience</label>
+                <input type="text" name="experience" id="experience" autocomplete="experience" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="{{worker.years_experience}}">
+              </div>
+
+
+               {{!-- Experience  end --}}
+
+
+              {{!-- Tag Start  --}}
+              <div class="col-span-6 sm:col-span-3">
+                <label for="tag-id" class="block text-sm font-medium text-gray-700">Tag</label>
+                <select id="tag-id" name="tag-id" autocomplete="tag-id" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                          <option value="1">Alarm Systems</option>
+                          <option value="4">Doors</option>
+                          <option value="3">Windows</option>
+                          <option value="6">Video Surveliance</option>
+                          <option value="5">Fire protection</option>
+                          <option value="2">Locking facilities</option>
+                  <option selected>{{worker.tag-id}}</option>
+                </select>
+              </div>
+
+              {{!-- Tag END  --}}
+
+
+
               <div class="col-span-6 sm:col-span-3">
                 <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
                 <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
@@ -336,6 +382,15 @@
                 <label for="city" class="block text-sm font-medium text-gray-700">City</label>
                 <input type="text" name="city" id="city" autocomplete="address-level2" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="{{worker.Contact.city}}">
               </div>
+
+              {{!-- Zip Code start --}}
+               <div class="col-span-6">
+                <label for="zipcode" class="block text-sm font-medium text-gray-700">Zip Code</label>
+                <input type="text" name="zipcode" id="zipcode" autocomplete="zipcode" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="{{worker.Contact.zip_code}}">
+              </div>
+
+              {{!-- Zip Code start --}} 
+
 
                 <div id="id" style="display:none">{{worker.id}}</div>
               <!--<div class="col-span-6 sm:col-span-3 lg:col-span-2">
