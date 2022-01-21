@@ -77,14 +77,26 @@
                     class="font-medium text-gray-500 hover:text-gray-900"
                     >Contact Us</a
                   >
+     
 
                   {{#if logged_in}}
+
+                    <a
+                      href="/profile/{{user_id}}"
+                      class="font-medium text-gray-500 hover:text-gray-900"
+                      id="profile"
+                      >Profile</a
+                    >
+
                     <a
                       href="/logout"
                       class="font-medium text-gray-500 hover:text-gray-900"
                       id="logout"
                       >Log out</a
                     >
+                   
+                 
+                    
                     <a
                       href="/placedOrder"
                       class="font-medium text-gray-500 hover:text-gray-900"
@@ -106,6 +118,7 @@
     </main>
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
+      <script src="/js/profile.js"></script>
     {{/if}}
  
 <!-- Start of ChatBot (www.chatbot.com) code -->
