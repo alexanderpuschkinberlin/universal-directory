@@ -1,6 +1,6 @@
 # universal-directory
 
-<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="./public/Planet_logo.jpg"/></a></div>
+<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="https://github.com/alexanderpuschkinberlin/universal-directory/blob/main/public/universal_directory_readme.png"/></a></div>
 
 <h1>Universal Directory</h1>
 
