@@ -1,5 +1,5 @@
 const orderPage = document.querySelector("#order-page");
-let workerId = document.querySelector("#id");
+let workerId = document.querySelector("#id").textContent.trim();
 
 const renderOrder = async (event) => {
   event.preventDefault();

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Order } = require("../../models");
+// const { msg } = require("../../utils/msg");
 
 // create new order
 router.post("/", async (req, res) => {
@@ -17,6 +18,7 @@ router.post("/", async (req, res) => {
       worker_id: req.body.worker_id,
       status: "Active",
     });
+    // msg(req.body.first_name);
     res.status(200).json(newOrder);
   } catch (err) {
     console.log(err);
@@ -24,7 +26,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// delete order
+// update order status
 router.put("/:id", (req, res) => {
   console.log("Updating " + req.params.id + " to " + req.body.status);
   Order.update(
