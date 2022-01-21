@@ -1,4 +1,4 @@
-c; // Initialize and add the map
+// Initialize and add the map
 function initMap() {
   // The location of Uluru
   let lat = document.getElementById("lat").textContent;
