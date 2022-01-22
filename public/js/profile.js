@@ -1,5 +1,5 @@
 const orderPage = document.querySelector("#order-page");
-const workerId = document.querySelector("#id").textContent.trim();
+let workerId = document.querySelector("#id").textContent.trim();
 
 const renderOrder = async (event) => {
   event.preventDefault();
@@ -20,6 +20,7 @@ const editProfileHandler = async (event) => {
   const city = document.querySelector("#city").value.trim();
   const fileName = document.querySelector("#file-upload").files[0];
   const data = { id, about, name, surname, email, country, address, city };
+  console.log(fileName);
 
   if (email) {
     let formData = new FormData();
@@ -46,8 +47,8 @@ const editProfileHandler = async (event) => {
   }
 };
 
-document
-  .querySelector("#save-btn")
-  .addEventListener("click", editProfileHandler);
-
+const savebtnEl = document.querySelector("#save-btn");
+if (savebtnEl) {
+  savebtnEl.addEventListener("click", editProfileHandler);
+}
 document.getElementById("order-page").addEventListener("click", renderOrder);

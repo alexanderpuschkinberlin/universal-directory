@@ -21,7 +21,7 @@
     "certificate": "true",
     "tag_id": 3,
     "about": "I will commit to deliver you superior service",
-    "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
+    "image_url": "https://images.unsplash.com/photo-1614213951697-a45781262acf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   },
   {
     "name": "Barnie",
@@ -33,7 +33,7 @@
     "certificate": "true",
     "tag_id": 2,
     "about": "I am in general an awesome person! :)",
-    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
+    "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
   },
   {
     "name": "Edna",
@@ -55,56 +55,80 @@
     "password": "montie01",
     "years_experience": 4,
     "certificate": "true",
-    "tag_id": 2,
+    "tag_id": 4,
     "about": "I am offering the best service for the past 2 years",
     "image_url": "https://media.istockphoto.com/photos/handyman-fitting-a-new-door-picture-id1191080420?b=1&k=20&m=1191080420&s=170667a&w=0&h=oReEe3rA99Z45h0QtaIv64KLxmlf49KxijrvroFEYO4="
   },
   {
-    "name": "Abraham",
-    "surname": "Simpson",
-    "email": "test2@simpsons.com",
+    "name": "Santa",
+    "surname": "Little Helper",
+    "email": "test3@simpsons.com",
     "birth_date": "20.07.1935",
-    "password": "abby01",
+    "password": "abby03",
     "years_experience": 5,
     "certificate": "true",
-    "tag_id": 1,
+    "tag_id": 5,
     "about": "I want to quit, but need money so please order my services :) ",
     "image_url": "https://thumbs.dreamstime.com/z/door-lock-service-locksmith-working-red-uniform-95856992.jpg"
   },
   {
-    "name": "Barnie",
-    "surname": "Gamble",
-    "email": "test3@aalchoholic.com",
+    "name": "Clancy",
+    "surname": "Wiggum",
+    "email": "test4@aalchoholic.com",
     "birth_date": "20.05.1977",
-    "password": "barnie01",
+    "password": "chief01",
     "years_experience": 7,
     "certificate": "true",
     "tag_id": 2,
     "about": "I need money for beer!",
-    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
+    "image_url": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
   },
   {
-    "name": "Edna",
-    "surname": "Krabbapel",
-    "email": "test4@elemschool.com",
+    "name": "Apu",
+    "surname": "Nahasapeemapetilon",
+    "email": "test5@elemschool.com",
     "birth_date": "25.05.1988",
-    "password": "enda01",
+    "password": "enda02",
     "years_experience": 4,
     "certificate": "true",
-    "tag_id": 3,
+    "tag_id": 6,
     "about": "I am too serious for this bullshit ))))",
-    "image_url": "https://previews.123rf.com/images/auremar/auremar2002/auremar200203075/140594195-portrait-of-a-female-locksmith.jpg"
+    "image_url": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   },
   {
-    "name": "Barnie",
-    "surname": "Gamble",
-    "email": "test5@aalchoholic.com",
+    "name": "Kent",
+    "surname": "Rbockman",
+    "email": "test8@aalchoholic.com",
     "birth_date": "20.05.1977",
-    "password": "barnie01",
+    "password": "barnie08",
     "years_experience": 7,
     "certificate": "true",
     "tag_id": 3,
     "about": "It is obvious that our project need to get A+!!!",
-    "image_url": "https://image.shutterstock.com/image-photo/locksmith-screwdriver-holding-thumbs-260nw-1292238202.jpg"
+    "image_url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "name": "Milhouse",
+    "surname": "Van Houten",
+    "email": "test7@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "barnie07",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 1,
+    "about": "It is obvious that our project need to get A+!!!",
+    "image_url": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  },
+  {
+    "name": "Patty",
+    "surname": "Bouvier",
+    "email": "test9@aalchoholic.com",
+    "birth_date": "20.05.1977",
+    "password": "pattie07",
+    "years_experience": 7,
+    "certificate": "true",
+    "tag_id": 2,
+    "about": "It is obvious that our project need to get A+!!!",
+    "image_url": "https://images.unsplash.com/photo-1507114845806-0347f6150324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
   }
 ]

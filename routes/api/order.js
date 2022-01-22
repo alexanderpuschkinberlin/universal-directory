@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Order } = require("../../models");
+// const { msg } = require("../../utils/msg");
 
 // create new order
 router.post("/", async (req, res) => {
@@ -15,7 +16,9 @@ router.post("/", async (req, res) => {
       email: req.body.email,
       zip: req.body.zip,
       worker_id: req.body.worker_id,
+      status: "Active",
     });
+    // msg(req.body.first_name);
     res.status(200).json(newOrder);
   } catch (err) {
     console.log(err);
@@ -23,19 +26,30 @@ router.post("/", async (req, res) => {
   }
 });
 
-// delete order
-router.delete("/:id", withAuth, (req, res) => {
-  Order.destroy({
-    where: {
-      id: req.params.id,
+// update order status
+router.put("/:id", (req, res) => {
+  console.log("Updating " + req.params.id + " to " + req.body.status);
+  Order.update(
+    {
+      status: req.body.status,
     },
-  }).then((orderData) => {
-    if (!orderData) {
-      res.status(404).json({ message: "No order found with this ID" });
-      return;
+    {
+      where: {
+        id: req.params.id,
+      },
     }
-    res.json(orderData);
-  });
+  )
+    .then((orderStatus) => {
+      if (!orderStatus) {
+        res.status(404).json({ message: "No order found with this ID." });
+        return;
+      }
+      res.json(orderStatus);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
