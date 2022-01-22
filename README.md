@@ -1,6 +1,4 @@
-# universal-directory
-
-<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="https://github.com/alexanderpuschkinberlin/universal-directory/blob/main/public/universal_directory_readme.png"/></a></div>
+<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="./public/image/homepage.png"/></a></div>
 
 <h1>Universal Directory</h1>
 
@@ -29,35 +27,39 @@
 ### Project Link
 
 - Please click [here](https://github.com/alexanderpuschkinberlin/universal-directory) to see the contents of our project in Github
-- [here]() you can access directly the web page
-- Please click [here]() to see the presentation of the project
+- [here](https://obscure-thicket-70245.herokuapp.com/) you can see the deployed app on heroku
+- Please click [here](https://docs.google.com/presentation/d/1oE0r5BqziUkpUkxwTSKMjsCLHVNPoBZU8sNTUb8xkL8/edit) to see the presentation of the project
 
 ### Getting Started
 
-- Clone the GitHub project into your local machine
-- Navigate into the project
-- Open the project into VSCode
-- Open the 'index.html' 3M & open with live server(Alt+L Alt+O)
-
 ```
-git clone *********************
-cd carbon-down
+git clone
+cd universal-directory
 code .
+seed the data
+  run mysql2
+  run the table in db
+  quit
+npm run seed
+npm run dev
+open the url by ctrl+click
+
+
 ```
 
 ### Contributors
 
-- Zahra : https://github.com/Amir-Fard2025
-- Alexander : https://github.com/Amir-Fard2025
+- Zahra : https://github.com/ZahraMammadli
+- Alexander : https://github.com/alexanderpuschkinberlin
 - Amir : https://github.com/Amir-Fard2025
 
 ### About The Project
 
-<p>****************************************</p>
+<p>this project is a complete presentation of the usage of MVC in web development. using the model and seed the data with sequelize, and different controllers to conect the model to view and update the changes. The views are presented with handlebars</p>
 
 #### User Flow
 
-<p>*****************************************</p>
+<p>the professionals who are using this app, they have this ability ti update their profile and to be order by clients. The workers can sign up and do edits, and normal users can search for different professionals</p>
 
 #### Technologies Used
 
@@ -65,7 +67,7 @@ code .
 
 - HTML
 - CSS
-- Bulma, Modern CSS
+- Tailwindcss
 - JavaScript
 - jQuery
 - Express
@@ -77,24 +79,23 @@ code .
 #### Web APIs
 
 - The following APIs are implemented in this project:
+- [](google maps)
 - []()
-- [](),here we used the API to save the airports' information and later we use it as an object locally
 
 #### Wireframes
 
 > Note:
 > The structure of the code has been built According to the main flowcharts; however there could be some slight changes during the developing process
 
-![Image](./assets/images/Flowchart01.png)
-![Image]()
-![Image]()
+![Image](./public/image/wireframe01.png)
+![Image](./public/image/wireframe02.png)
 
 #### Plans For Improvement
 
-<p>**********************************************</p>
+<p>The following mission are our next steps: </p>
 
-#### Screenshots
-
-- Index page ![Image](./assets/images/IndexPage.png)
-
-- Home Page ![Image](./assets/images/AboutUs.png)
+- Many2Many relation
+- Design improvement for profile page
+- Add rating and comments section for clients
+- Add online payment support
+- Make the project universal to cover more professions
