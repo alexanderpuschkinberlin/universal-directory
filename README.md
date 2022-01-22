@@ -49,7 +49,7 @@ open the url by ctrl+click
 
 ### Contributors
 
-- Zahra : https://github.com/Amir-Fard2025
+- Zahra : https://github.com/ZahraMammadli
 - Alexander : https://github.com/alexanderpuschkinberlin
 - Amir : https://github.com/Amir-Fard2025
 
@@ -98,3 +98,4 @@ open the url by ctrl+click
 - Design improvement for profile page
 - Add rating and comments section for clients
 - Add online payment support
+- Make the project universal to cover more professions
