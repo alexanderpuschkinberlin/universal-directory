@@ -1,6 +1,4 @@
-# universal-directory
-
-<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="./public/images/universal_directory_readme.png"/></a></div>
+<div style="text-align:center"><a href="https://github.com/alexanderpuschkinberlin/universal-directory"><img src="./public/image/homepage.png"/></a></div>
 
 <h1>Universal Directory</h1>
 
@@ -52,7 +50,7 @@ open the url by ctrl+click
 ### Contributors
 
 - Zahra : https://github.com/Amir-Fard2025
-- Alexander : https://github.com/Amir-Fard2025
+- Alexander : https://github.com/alexanderpuschkinberlin
 - Amir : https://github.com/Amir-Fard2025
 
 ### About The Project
@@ -89,9 +87,8 @@ open the url by ctrl+click
 > Note:
 > The structure of the code has been built According to the main flowcharts; however there could be some slight changes during the developing process
 
-![Image](./assets/images/Flowchart01.png)
-![Image]()
-![Image]()
+![Image](./public/image/wireframe01.png)
+![Image](./public/image/wireframe02.png)
 
 #### Plans For Improvement
 
@@ -100,8 +97,4 @@ open the url by ctrl+click
 - Many2Many relation
 - Design improvement for profile page
 - Add rating and comments section for clients
-- Improve database with Meta Tags & Meta Description for SEO
-
-#### Screenshots
-
-- Home Page ![Image](./public/images/universal_directory)
+- Add online payment support
